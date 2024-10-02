@@ -77,8 +77,9 @@
 
   .video-background {
     width: 100%; /* O vídeo ocupa 100% da largura */
-    height: auto; /* Ajusta a altura automaticamente */
+    height: 100%; /* O vídeo ocupa 100% da altura da seção */
     z-index: 0; /* Coloca o vídeo atrás do overlay */
+    object-fit: cover; /* Garante que o vídeo cubra todo o contêiner */
   }
 
   .conteudo-diferenciais {

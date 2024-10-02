@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .fale-conosco-conteudo  {
  display: flex;
  flex-direction: column;
@@ -50,4 +51,32 @@
   height: auto;
   border-top-left-radius: 20px; /* Adiciona border-radius na ponta superior esquerda */
   border-radius: 0 20px 20px 20px;
+}
+
+
+@media (max-width: 768px) {
+  .fale-conosco {
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .imagem-container {
+    max-width: 100%;
+    position: relative; /* Necessário para centralizar o retângulo */
+  }
+
+  .retangulo-azul {
+    top: 10%;
+    left: 25%;
+    width: 260px;
+    height: 120px;
+    border-radius: 100px;
+    transform: translate(-50%, -50%); /* Centraliza o retângulo */
+    z-index: -1; /* Coloca o retângulo atrás da imagem */
+  }
+
+  .imagem-ajustada {
+    width: 100%; 
+  }
 }
