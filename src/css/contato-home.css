@@ -1,0 +1,54 @@
+.fale-conosco {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.fale-conosco-conteudo  {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+.fale-conosco-conteudo h2 {
+  font-family: 'KidsMagic', sans-serif;
+  color: var(--text);
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+
+.fale-conosco-info h3 {
+  font: 600 1.2rem 'Poppins', sans-serif;
+  color: var(--text);
+} 
+
+.fale-conosco-info p, .fale-conosco-info a {
+  font: 300 1rem/1.6 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.imagem-container {
+  position: relative;
+  display: inline-block; /* Permite que o contêiner se ajuste ao tamanho da imagem */
+  flex: 1;
+  max-width: 50%; /* Ajusta a largura máxima do contêiner */
+}
+
+.retangulo-azul {
+  position: absolute;
+  top: -60px; /* Ajusta a posição do retângulo */
+  left: -80px; /* Ajusta a posição do retângulo */
+  width: 570px;
+  height: 370px;
+  border-radius: 200px;
+  background-color: #00DFED; /* Cor azul */
+  z-index: -1; /* Coloca o retângulo atrás da imagem */
+}
+
+
+.imagem-ajustada {
+  width: 90%; /* Diminui o tamanho da imagem */
+  height: auto;
+  border-top-left-radius: 20px; /* Adiciona border-radius na ponta superior esquerda */
+  border-radius: 0 20px 20px 20px;
+
+}
