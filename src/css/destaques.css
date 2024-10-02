@@ -1,0 +1,117 @@
+.destaques-background {
+  background-image: url('../img/background-destaques.webp'); /* Caminho para o SVG */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* 100% de altura */
+  width: 100%; /* 100% de largura */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -2;
+}
+
+.destaques-lista {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.destaque {
+  text-align: center;
+  padding: 40px;
+  flex: 1;
+  position: relative;
+}
+
+.destaque span {
+  font: 800 3rem 'Poppins', sans-serif;
+  color: var(--textwhite);
+}
+
+.destaque p {
+  font: 400 1rem/1.6 'Poppins', sans-serif;
+  color: var(--textwhite);
+}
+
+.destaque-experiencia, .destaque-profissionais, .destaque-salas, .destaque-terapias {
+  position: relative;
+}
+
+.destaque-experiencia::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px; /* Tamanho do quadrado */
+  height: 200px; /* Tamanho do quadrado */
+  background-color: var(--laranja-escuro); /* Cor de fundo do quadrado */
+  transform: translate(-50%, -50%); /* Centraliza o quadrado */
+  z-index: -1; /* Coloca o quadrado atrás do conteúdo */
+  border-radius: 100px 100px 0 0;
+}
+
+.destaque-profissionais::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px; /* Tamanho do quadrado */
+  height: 200px; /* Tamanho do quadrado */
+  background-color: var(--laranja); /* Cor de fundo do quadrado */
+  transform: translate(-50%, -50%); /* Centraliza o quadrado */
+  z-index: -1; /* Coloca o quadrado atrás do conteúdo */
+  border-radius: 100px 0 0 100px;
+}
+
+.destaque-salas::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px; /* Tamanho do quadrado */
+  height: 200px; /* Tamanho do quadrado */
+  background-color: var(--amarelo); /* Cor de fundo do quadrado */
+  transform: translate(-50%, -50%); /* Centraliza o quadrado */
+  z-index: -1; /* Coloca o quadrado atrás do conteúdo */
+  border-radius: 200px;
+}
+
+.destaque-terapias::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px; /* Tamanho do quadrado */
+  height: 200px; /* Tamanho do quadrado */
+  background-color: var(--azul); /* Cor de fundo do quadrado */
+  transform: translate(-50%, -50%); /* Centraliza o quadrado */
+  z-index: -1; /* Coloca o quadrado atrás do conteúdo */
+  border-radius: 200px 0 0 0;
+}
+
+@media (max-width: 768px) {
+
+  .destaques-lista {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .destaque {
+    width: 60%;  
+    }
+
+  .destaque span {
+    font: 800 2.4rem 'Poppins', sans-serif;
+  }
+
+  .destaque-terapias::before, .destaque-salas::before, .destaque-profissionais::before, .destaque-experiencia::before  {
+    width: 180px; /* Tamanho do quadrado */
+    height: 180px; /* Tamanho do quadrado */
+  }
+}
