@@ -1,0 +1,95 @@
+.servicos {
+  background-color: #1AAAB3; /* Cor azul */
+  background-image: url('../img/quebra-cabeca-azul.svg'); /* Caminho para o SVG */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* 100% de altura */
+  width: 100%; /* 100% de largura */
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.servicos-conteudo {
+  padding: 100px 0px; 
+  z-index: 1; /* Eleva o z-index do conteúdo sobre a imagem */
+  position: relative; /* Necessário para z-index fazer efeito */
+}
+
+.servicos h2 {
+  font-family: 'KidsMagic', sans-serif;
+  color: var(--textwhite);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.lista-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 60%; 
+}
+
+.lista-servicos li {
+  flex: 0 0 48%; 
+  box-sizing: border-box;
+  margin: 1%; 
+}
+
+.lista-servicos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--laranja);
+  color: var(--textwhite);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  font: 600 0.8rem/1.6 'Poppins', sans-serif;
+  width: 100%; 
+  min-height: 50px; 
+}
+
+.servicos-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0; /* A imagem fica abaixo do conteúdo */
+}
+
+.servicos-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+
+  .servicos-conteudo {
+    padding: 60px 0px; 
+  }
+  .lista-servicos {
+    width: 100%; /* Ajusta para 100% em telas pequenas */
+  }
+
+  .lista-servicos li {
+    flex: 0 0 100%; /* Cada item ocupa 100% da largura em telas pequenas */
+  }
+  
+  .servicos-img {
+    display: none; /* Esconde a imagem em telas menores */
+  }
+
+  .servicos h2 {
+   text-align: center;
+  }
+}
+

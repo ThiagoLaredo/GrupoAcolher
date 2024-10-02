@@ -1,0 +1,106 @@
+.diferenciais {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinha o conteúdo ao lado direito */
+  height: 100vh; /* 100% de altura */
+  width: 100%; /* 100% de largura */
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+.conteudo-diferenciais {
+  position: relative;
+  z-index: 1; /* Certifique-se de que o conteúdo fique acima do vídeo */
+  /* max-width: 50%;  */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinha o conteúdo à direita do contêiner */
+}
+
+.diferenciais h2 {
+  font-family: 'KidsMagic', sans-serif;
+  color: var(--text);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.lista-diferenciais {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-diferenciais li {
+  font: 400 1rem/1.6 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  color: var(--text); /* Cor branca para o texto */
+  position: relative;
+  padding-left: 20px; /* Espaço para o bullet */
+}
+
+
+.lista-diferenciais li::before {
+  content: '•'; /* Bullet */
+  color: var(--laranja); /* Cor laranja */
+  position: absolute;
+  left: -10px; /* Alinha o bullet à direita */
+  transform: translateX(100%); /* Move o bullet para fora do padding */
+}
+
+
+@media (max-width: 768px) {
+  .diferenciais {
+    justify-content: center; /* Centraliza o conteúdo */
+  }
+
+  .diferenciais::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay preta com opacidade */
+    z-index: 1; /* Coloca o overlay acima do vídeo */
+  }
+
+  .video-background {
+    width: 100%; /* O vídeo ocupa 100% da largura */
+    height: auto; /* Ajusta a altura automaticamente */
+    z-index: 0; /* Coloca o vídeo atrás do overlay */
+  }
+
+  .conteudo-diferenciais {
+    align-items: center; /* Centraliza o conteúdo */
+    text-align: left; /* Centraliza o texto */
+    color: #FFFFFF; /* Texto branco */
+    z-index: 2; /* Certifique-se de que o conteúdo fique acima do overlay */
+  }
+
+  .diferenciais h2 {
+    color: #FFFFFF; /* Texto branco */
+    text-align: center;
+  }
+
+  .lista-diferenciais li {
+    color: #FFFFFF; /* Texto branco */
+    padding-left: 20px; /* Espaço para o bullet */
+  }
+
+  .lista-diferenciais li::before {
+    left: 0; /* Ajusta a posição do bullet */
+    transform: translateX(0); /* Remove a transformação */
+    margin-right: 0px; /* Adiciona espaço entre o bullet e o texto */
+  }
+}

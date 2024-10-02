@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThiagoLaredo/WomanLab.git"
+    "url": "git+https://github.com/ThiagoLaredo/grupoacolher.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ThiagoLaredo/WomanLab.git/issues"
+    "url": "https://github.com/ThiagoLaredo/grupoacolher.git/issues"
   },
-  "homepage": "https://github.com/ThiagoLaredo/WomanLab.git#readme",
+  "homepage": "https://github.com/ThiagoLaredo/grupoacolher.git#readme",
   "devDependencies": {
     "@babel/core": "^7.24.9",
     "@babel/plugin-transform-runtime": "^7.24.7",

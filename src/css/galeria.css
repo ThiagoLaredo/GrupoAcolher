@@ -1,0 +1,44 @@
+.galeria {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.galeria h2 {
+  font-family: 'KidsMagic', sans-serif;
+  color: var(--text);
+  font-size: 2.5em;
+  letter-spacing: 5px;
+  text-align: center;
+} 
+
+.galeria p {
+  font: 400 1rem/1.6 'Poppins', sans-serif;
+  color: var(--text);
+} 
+
+.lista-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Define 3 colunas */
+  gap: 20px;
+}  
+
+.lista-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+} 
+
+
+@media (max-width: 768px) {
+
+  .galeria {
+    padding: 60px 20px;
+  }
+  
+  .lista-galeria {
+    grid-template-columns: repeat(2, 1fr); /* Define 3 colunas */
+  }  
+}

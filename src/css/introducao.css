@@ -1,10 +1,10 @@
 
 .introducao {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
   width: 100%;
-  background: url('../img/capa-womanlab.webp') no-repeat center center;
+  background: url('../img/imagem-home.webp') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -13,50 +13,77 @@
   position: relative;
 }
 
+.introducao::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor e opacidade do overlay */
+  z-index: 1; /* Certifique-se de que o overlay fique acima da imagem */
+}
+
 .introducao-texto {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  padding: 0 20px; 
+  align-items: flex-start;
+  margin-top: 100px;
   gap: 20px;
+  padding: 0 20px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 2; /* Certifique-se de que o texto fique acima do overlay */
+}
+
+.introducao-texto p {
+  font:300 1.4rem/1.8 'Poppins', sans-serif;
+  color: var(--textwhite);
+  max-width: 66ch;
 }
 
 .wave-text {
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: 3rem;
+  line-height: 4rem;
   font-weight: normal;
-  font-family: 'OpenDyslexic';
+  font-family: 'KidsMagic', sans-serif;
   color: var(--textwhite);
-  text-align: center;
-  max-width: 20ch;
+  text-align: left;
+  max-width: 40ch;
   z-index: 2;
 }
 
-
-.img-circulo {
-  position: absolute;
-  width: 30vw; /* 50% da largura da viewport */
-  height: 30vw; /* Mantém a proporção para formar um círculo perfeito */
-  background-color: var(--roxo);
-  opacity: 40%;
-  border-radius: 50%;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.btn-saiba-mais {
+  display: inline-block;
+  background-color: var(--laranja); 
+  color: #FFFFFF; 
+  font: 600 1rem/1.8 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 25px; 
+  text-decoration: none;
+  margin-top: 10px;
 }
+
 
 @media (max-width: 768px) { 
 
-  .img-circulo {
-    width: 90vw; /* 50% da largura da viewport */
-    height: 90vw; /* Mantém a proporção para formar um círculo perfeito */
+  .introducao-texto {
+    margin-top: 60px;
+    align-items: center;
+    text-align: center;
   }
 
   .wave-text {
-    font-size: 2.4rem;
-    line-height: 3.4rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: center;
+  }
+
+  .introducao-texto p {
+    font: 300 1.2rem/1.6 'Poppins', sans-serif;
+    color: var(--textwhite);
+    max-width: none;
   }
 }
 

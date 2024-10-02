@@ -1,0 +1,103 @@
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 100px 20px;
+}
+
+.sobre-texto {
+  max-width: 600px;
+}
+
+.sobre-texto h2 {
+  font-family: 'KidsMagic', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.sobre-texto p {
+  font: 300 1.2rem/1.6 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+.sobre-texto p strong {
+  font-weight: 600;
+}
+
+.sobre-img {
+  position: relative;
+  display: inline-block; /* ou outro display conforme necessário */
+}
+
+.sobre-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px 20px 20px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.sobre-img::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 570px;
+  height: 370px;
+  background-color: var(--laranja); /* Cor laranja */
+  border-radius: 200px; /* Bordas arredondadas */
+  transform: translate(-50%, -50%); /* Centraliza o pseudo-elemento */
+  z-index: 1; /* Certifique-se de que o pseudo-elemento fique abaixo da imagem */
+}
+
+.btn-saiba-mais-2 {
+  display: inline-block;
+  color: var(--text); /* Fonte branca */
+  padding: 10px 20px 10px 0px; /* Espaçamento interno */
+  border-radius: 25px; /* Bordas arredondadas */
+  text-decoration: none;
+  font: 600 1rem 'Poppins', sans-serif; 
+  position: relative;
+}
+
+.btn-saiba-mais-2::after {
+  content: '>'; /* Conteúdo da seta */
+  display: inline-block;
+  margin-left: 10px; /* Espaço entre o texto e a seta */
+  transition: margin-left 0.3s ease; /* Transição suave para o movimento da seta */
+  vertical-align: middle; /* Alinha a seta ao meio do texto */
+}
+
+.btn-saiba-mais-2:hover::after {
+  margin-left: 15px; /* Move a seta para a direita ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+
+  .sobre {
+    gap: 40px;
+    padding: 60px 20px;
+  }
+
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre img {
+    margin-top: 20px;
+  }
+
+  .sobre-img img {
+    border-radius: 20px;
+  }
+
+  .sobre-img::before {
+    top: 30%;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+    border-radius: 100px; /* Ajusta as bordas arredondadas para o tamanho menor */
+  }
+}

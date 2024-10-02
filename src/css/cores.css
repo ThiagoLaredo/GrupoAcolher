@@ -1,15 +1,14 @@
 :root {
   --textwhite: #F8F8F8;
-  --text: #2D2D2D;
+  --text: #1A1A1A;
   --bg-cinza: #f5f5fa;
   /* --bg-cinza: rgba(240, 240, 255, 0.8); */
   --bg-branco: #fff;
-  --roxo: #342840;
-  --verde-escuro: #405919;
-  --verde-claro: #537322;
-  --lilas-escuro: #734C56;
-  --lilas-claro: #A6727C;
-  --rosa: #F5DDD5;
+  --amarelo: #FFAF00;
+  --laranja: #FB8A09;
+  --laranja-escuro: #FF5700;
+  --azul: #1AAAB3;
+
 }
 
 .text {
