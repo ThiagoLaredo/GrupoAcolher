@@ -35,7 +35,7 @@
 
 .retangulo-azul {
   position: absolute;
-  top: -60px; /* Ajusta a posição do retângulo */
+  top: -64px; /* Ajusta a posição do retângulo */
   left: -80px; /* Ajusta a posição do retângulo */
   width: 570px;
   height: 370px;
@@ -50,5 +50,4 @@
   height: auto;
   border-top-left-radius: 20px; /* Adiciona border-radius na ponta superior esquerda */
   border-radius: 0 20px 20px 20px;
-
 }
