@@ -229,35 +229,68 @@
       </div>    
     </section>
 
-    <footer>   
-      <div class="rodape container">
-        <div class="contatos-sociais">
-          <img id="logo-rodape" src="./img/logo-rosa.png">
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/company/woman-lab-ser-e-desenvolver" target="_blank"><img src="./img/linkedin.svg" alt="Linkedin"></a>
-            <a href="https://www.instagram.com/womanlab_oficial/" target="_blank"><img src="./img/instagram.svg" alt="Instagram"></a> 
-            <a href="mailto:exemplo@dominio.com">
-              <img src="./img/email.svg" alt="Enviar e-mail">
-            </a>
-            
+    <footer class="footer">
+      <div class="form-container">
+        <h2>ENVIE UMA MENSAGEM</h2>
+        <form class="contato-form">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required>
+    
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+    
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="footer-colunas container">
+        <div class="footer-contatos">
+          <h3>Contatos</h3>
+          <div class="footer-contatos-lista">
+            <div class="contato-item">
+              <img src="./img/whatsapp-icon.svg" alt="Ícone do WhatsApp">
+              <span>(81) 99914-1200</span>
+            </div>
+            <div class="contato-item">
+              <img src="./img/phone-icon.svg" alt="Ícone de Telefone">
+              <span>(81) 3299-5499</span>
+            </div>
+            <div class="contato-item">
+              <img src="./img/email-icon.svg" alt="Ícone de Email">
+              <span>contato@grupoacolher.com.br</span>
+            </div>
+            <div class="contato-item">
+              <img src="./img/icon-place.svg" alt="Ícone de Localização">
+              <span>Avenida Historiador Pereira da Costa, 809</span>
+            </div>
           </div>
         </div>
-        <div class="form">
-          <h2>Assine nossa Newsletter</h2>
-          <form id="contact-form" aria-label="Formulário" method="POST">
-            <div class="form-field half-width-1">
-                <input type="text" id="nome" name="nome" placeholder="Nome*" required>
-            </div>
-            <div class="form-field half-width">
-                <input type="email" id="email" name="email" placeholder="E-mail*" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-            </div>         
-            <button type="submit" id="send-button">Enviar</button>
-        </form>  
+        <div class="footer-redes-sobre">
+          <h3>Sobre  o Acolher</h3>
+          <p>Aqui, acolhemos cada paciente com amor, dedicação e profissionalismo.</p>
+          <a href="https://www.instagram.com/womanlab_oficial/" target="_blank">
+            <img src="./img/insta.svg" alt="Instagram Grupo Acolher">
+            <span class="visually-hidden">Ir para o Instagram</span>
+        </a>        
+        </div>
+        <div class="footer-newsletter">
+          <h3>Assine nossa Newsletter</h3>
+          <form class="newsletter-form">
+            <label for="nome-newsletter">Nome
+              <input type="text" id="nome-newsletter" name="nome-newsletter" required>
+            </label>
+            <label for="email-newsletter">Email
+              <input type="email" id="email-newsletter" name="email-newsletter" required>
+            </label>
+            <button type="submit">Assinar</button>
+          </form>
         </div>
       </div>
     </footer>
     <!-- Ícone flutuante do WhatsApp -->
-    <a href="https://wa.me/5511981291689" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/551198ss1291689" class="whatsapp-float" target="_blank">
       <img src="./img/whatsapp-icon2.svg" alt="WhatsApp" class="whatsapp-icon">
     </a>
   </body>
