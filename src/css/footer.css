@@ -1,153 +1,171 @@
-footer {
-  background-color: var(--roxo);
-  padding: 80px 0;
-  position: relative;
+.footer {
+  padding: 100px 20px;
+  background-color: #F9890A; /* Cor azul */
+  background-image: url('../img/fundo-quebra-cabeca-laranja.svg'); /* Caminho para o SVG */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* 100% de altura */
+  width: 100%; /* 100% de largura */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
 }
 
-.rodape {
+.form-container {
+  background-color: #f0f0f0; /* Cor de fundo cinza */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+.form-container h2 {
+  font-family: 'KidsMagic', sans-serif;
+  color: var(--text);
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-form label {
+  margin-bottom: 5px;
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Cor do texto dos rótulos */
+}
+
+.contato-form input,
+.contato-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+}
+
+.contato-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--laranja); /* Cor do botão */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+
+.footer-colunas {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  gap: 80px;
 }
 
-.contatos-sociais {
-  flex: 1;
+.footer-contatos h3 {
+  margin-bottom: 20px;
+  font: 600 1.2rem 'Poppins', sans-serif;
+  color: var(--textwhite); /* Cor do texto do título */
+}
+
+.footer-contatos-lista {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 15px; /* Espaçamento entre os itens */
 }
 
-#logo-rodape {
-  display: block;
-  height: auto;
-  width: 30%;
-}
-
-.social-icons {
+.contato-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
-.form {
-  flex: 1;
+.contato-item span {
+  font: 300 1rem 'Poppins', sans-serif;
+  color: var(--textwhite); 
+}
+
+.contato-item img {
+  width: 24px; /* Largura do ícone */
+  height: 24px; /* Altura do ícone */
+}
+
+.footer-redes-sobre {
+  max-width: 400px;
+}
+
+.footer-redes-sobre h3 {
+  margin-bottom: 20px;
+  font: 600 1.2rem 'Poppins', sans-serif;
+  color: var(--textwhite); /* Cor do texto do título */
+  max-width: 400px;
+}
+
+.footer-redes-sobre p {
+  margin-bottom: 20px;
+  font: 300 1rem 'Poppins', sans-serif;
+  color: var(--textwhite); /* Cor do texto do título */
+}
+
+.footer-newsletter h3 {
+  margin-bottom: 20px;
+  font: 600 1.2rem 'Poppins', sans-serif;
+  color: var(--textwhite); /* Cor do texto do título */
+}
+
+.newsletter-form {
   display: flex;
   flex-direction: column;
-  gap: 10px
+  gap: 15px; /* Espaçamento entre os elementos do formulário */
+  margin: 0 auto; /* Centraliza o formulário horizontalmente */
 }
 
-.form h2 {
-  font: 500 1.2rem/1.2 'OpenDyslexic', sans-serif;
-  color: var(--rosa);
+.newsletter-form label {
+  font: 300 0.8rem 'Poppins', sans-serif;
+  color: var(--textwhite); /* Cor do texto dos rótulos */
+  display: flex;
+  flex-direction: column;
 }
 
-
-#contact-form {
-  width: 40vw;
-}
-
-.form-field {
-  margin-bottom: 20px;
-}
-
-.form-field label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-field input[type="email"], .form-field input[type="text"] {
-  width: 100%;
+.newsletter-form input {
   padding: 10px;
-  background-color: transparent;
-  color: var(--rosa);
-  /* placeholder: #F5DDD5; */
-  border: 0.5px solid var(--rosa);
-  border-radius: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif; /* Use a fonte do seu projeto */
+  font-size: 1rem;
+  margin-top: 2px; /* Espaçamento entre o texto do rótulo e o campo de entrada */
 }
 
-
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-  color: #F5DDD5;
+.newsletter-form button {
+  display: inline-block;
+  background-color: var(--amarelo); 
+  color: #FFFFFF; 
+  font: 600 1rem/1.8 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 25px; 
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: center;
 }
 
-.half-width, .half-width-1 {
-  float: left;
-  width: calc(50% - 10px); /* Ajusta a largura considerando o espaçamento */
-  box-sizing: border-box;
-}
+@media (max-width: 600px) {
 
-.half-width-1 {
-  margin-right: 20px; /* Espaçamento entre os campos */
-}
-
-#send-button {
-  background-color: var(--rosa);
-  color: var(--roxo);
-  padding: 12px 22px;
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-  font: 800 1rem/0.8 'OpenSans', sans-serif;
-  /* transition: opacity 0.3s ease;  */
-  opacity: 1;
-  text-transform: uppercase;
-}
-
-#send-button:hover {
-  opacity: 0.7; /* Reduz a opacidade quando o mouse está sobre o botão */
-}
-
-/* Clearfix */
-.form-field::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.grade-footer {
-  position: absolute;
-    top: -70px;  
-    right: 40px;  
-    width: 140px;  
-    height: 140px;  
-    z-index: 4;  
-}
-
-@media (max-width: 768px) { 
-
-  footer {
-    padding: 60px 0;
-  }
-  
-  .rodape {
-    flex-direction: column;
-    gap: 60px;
+  .footer {
+    padding: 60px 20px;
   }
 
-  #logo-rodape {
-    width: 80%;
+  .footer-colunas {
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
   }
 
-  #contact-form {
-    width: 90vw;
-  }
-
-  .form-field {
-    margin-bottom: 15px;
-  }
-
-  .half-width, .half-width-1 {
-    float: none;
-    width: 90%; /* Ajusta a largura considerando o espaçamento */
-    box-sizing: border-box;
-  }
-
-  .grade-footer {
-    position: absolute;
-      top: -40px;  
-      right: 20px;  
-      width: 80px;  
-      height: 80px;  
-  }
 }

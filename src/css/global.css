@@ -82,7 +82,7 @@ img {
   height: 60px;
   bottom: 20px;
   right: 20px;
-  background-color: var(--verde-claro);
+  background-color: #25d366; /* Cor verde do WhatsApp */
   border-radius: 50px;
   text-align: center;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Sombra mais suave */
