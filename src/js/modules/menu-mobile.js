@@ -1,13 +1,10 @@
 import gsap from "gsap";
 
 export default class MenuMobile {
-  constructor(logoMobile, menuButton, menuList, contatoMobile, linkedinMobile, instagramMobile, events) {
+  constructor(logoMobile, menuButton, menuList, events) {
     this.logoMobile = document.querySelector(logoMobile);
     this.menuButton = document.querySelector(menuButton);
     this.menuList = document.querySelector(menuList);
-    this.contatoMobile = document.querySelector(contatoMobile);
-    this.linkedinMobile = document.querySelector(linkedinMobile);
-    this.instagramMobile = document.querySelector(instagramMobile);
     this.activeClass = "active";
     this.events = events || ["click"];
     this.menuOpened = false; // Flag para controle de estado
@@ -33,9 +30,6 @@ export default class MenuMobile {
         this.menuOpened = true;
         this.menuList.classList.add(this.activeClass);
         this.menuButton.classList.add(this.activeClass);
-        this.contatoMobile.classList.add(this.activeClass);
-        this.linkedinMobile.classList.add(this.activeClass);
-        this.instagramMobile.classList.add(this.activeClass);
         this.animateMenuItems();
         this.toggleMenuAnimation(true);
       }
@@ -48,68 +42,10 @@ export default class MenuMobile {
       this.menuOpened = false;
       this.menuList.classList.remove(this.activeClass);
       this.menuButton.classList.remove(this.activeClass);
-      this.contatoMobile.classList.remove(this.activeClass);
-      this.linkedinMobile.classList.remove(this.activeClass);
-      this.instagramMobile.classList.remove(this.activeClass);
       this.toggleMenuAnimation(false);
     }
   }
 
-  // handleSubmenuClick() {
-  //   const submenuItems = this.menuList.querySelectorAll('.has-submenu > span');
-  //   submenuItems.forEach(item => {
-  //     const parent = item.closest('.has-submenu');
-  //     const submenu = parent ? parent.querySelector('.submenu') : null;
-      
-  //     // Verifica se o elemento de seta já existe, caso contrário, cria um novo SVG
-  //     let arrow = item.querySelector('.submenu-arrow');
-  //     if (!arrow) {
-  //       const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  //       svg.setAttribute('class', 'submenu-arrow');
-  //       svg.setAttribute('width', '20');
-  //       svg.setAttribute('height', '20');
-  //       svg.setAttribute('viewBox', '0 0 24 24');
-  //       svg.setAttribute('fill', 'none');
-  //       svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-
-  //       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  //       path.setAttribute('d', 'M8 10l4 4 4-4');
-  //       path.setAttribute('stroke', 'currentColor');
-  //       path.setAttribute('stroke-width', '2');
-  //       path.setAttribute('stroke-linecap', 'round');
-  //       path.setAttribute('stroke-linejoin', 'round');
-  //       svg.appendChild(path);
-
-  //       item.appendChild(svg);
-  //       arrow = svg; // Atualiza a referência da seta para o SVG recém-criado
-  //     }
-
-  //     if (submenu && arrow) {
-  //       // Lógica para alternar submenu no clique apenas no mobile
-  //       item.addEventListener('click', (e) => {
-  //         if (this.isMobile()) {
-  //           e.preventDefault();
-  //           e.stopPropagation(); // Evita o fechamento ao clicar no item do submenu
-
-  //           // Alterna entre abrir e fechar o submenu
-  //           const isActive = submenu.classList.contains('active');
-  //           submenu.classList.toggle('active', !isActive);
-  //           arrow.classList.toggle('open', !isActive);
-  //         }
-  //       });
-
-  //       // Lógica para alternar rotação da seta no hover para desktop
-  //       if (!this.isMobile()) {
-  //         item.addEventListener('mouseover', () => {
-  //           arrow.classList.add('open'); // Rotaciona a seta para cima no hover
-  //         });
-  //         item.addEventListener('mouseout', () => {
-  //           arrow.classList.remove('open'); // Retorna a seta ao estado normal
-  //         });
-  //       }
-  //     }
-  //   });
-  // }
 
   handleSubmenuClick() {
     const submenuItems = this.menuList.querySelectorAll('.has-submenu > span');
@@ -234,19 +170,6 @@ export default class MenuMobile {
         }
       );
     });
-
-    // Animação para email e Instagram
-    gsap.fromTo(this.contatoMobile, 
-      { opacity: 0, y: 10 }, 
-      { opacity: 1, y: 0, duration: 0.5, ease: "power1.out", delay: 0.1 + menuItems.length * 0.1 });
-
-    gsap.fromTo(this.linkedinMobile, 
-      { opacity: 0, y: 10 }, 
-      { opacity: 1, y: 0, duration: 0.5, ease: "power1.out", delay: 0.1 + (menuItems.length + 1) * 0.1 });
-
-    gsap.fromTo(this.instagramMobile, 
-      { opacity: 0, y: 10 }, 
-      { opacity: 1, y: 0, duration: 0.5, ease: "power1.out", delay: 0.1 + (menuItems.length + 1) * 0.1 });
   }
 
   toggleMenuAnimation(show) {
@@ -275,7 +198,7 @@ export default class MenuMobile {
   }
 
   init() {
-    if (this.logoMobile && this.menuButton && this.menuList && this.contatoMobile && this.linkedinMobile && this.instagramMobile) {
+    if (this.logoMobile && this.menuButton && this.menuList) {
       this.addMenuMobileEvents();
       this.addLinkClickEvents(); 
     }
