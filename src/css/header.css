@@ -46,7 +46,6 @@
   align-items: center;
 }
 
-
 .header_menu {
   box-sizing: border-box;
   height: 100%;
@@ -110,7 +109,6 @@ ul[data-menu="list"] {
 .submenu {
   display: none; /* Esconde o submenu por padrão */
   position: absolute; /* Usar absolute no desktop */
-  background-color: var(--bg-laranja);
   list-style: none;
   padding: 20px;
   margin: 0;
@@ -138,21 +136,18 @@ ul[data-menu="list"] {
   border-radius: 12px;
 }
 
-
-.sub-menu-programas,
-.sub-menu-programas li,
-.sub-menu-programas ul {
-  padding: 0;
-  margin-left: 0;
-  gap: 4px;
-}
-
 .sub-menu-programas {
   background-color: var(--amarelo);
   padding: 20px;
   border-radius: 10px;
 }
 
+.sub-menu-programas li,
+.sub-menu-programas ul {
+  padding: 0;
+  margin-left: 0;
+  gap: 4px;
+}
 
 .sub-menu-programas li a {
   margin: 0;
@@ -247,6 +242,12 @@ ul[data-menu="list"] {
   .has-submenu, .sub-menu-programas {
     display: flex;
     flex-direction: column;
+  }
+
+  .sub-menu-programas {
+    background-color: var(--laranja);
+    padding: 0;
+    border-radius: 0;
   }
 
   .contact-info {
