@@ -16,7 +16,7 @@ export const initPageOpenAnimations = () => {
 
     // Anima apenas os links e spans de primeiro nível, incluindo o <span>Serviços</span>
     gsap.to("#menu > li > a, #menu > li > span", { 
-        duration: 0.4, 
+        duration: 0.5, 
         delay: 0.8, 
         opacity: 1, 
         stagger: 0.2, 
@@ -46,17 +46,17 @@ export const initPageOpenAnimations = () => {
     const waveTextSpans = document.querySelectorAll(".introducao-texto h1 span");
     if (waveTextSpans.length > 0) {
         gsap.from(waveTextSpans, {
-            duration: 0.2,
+            duration: 0.5,
             opacity: 0,
             ease: "power1.inOut",
             y: -20,
             stagger: {
-                each: 0.02,
+                each: 0.025,
                 from: "start",
                 yoyo: true,
                 repeat: 0
             },
-            delay: 1
+            delay: 0.8
         });
     }
 };
@@ -77,4 +77,43 @@ export const initScrollAnimations = () => {
             ease: "power1.out"
         });
     });
+
+    const numeros = document.querySelectorAll('.numero');
+    numeros.forEach(numero => {
+        const originalText = numero.innerText; // Captura o texto original
+        const hasPlus = originalText.startsWith('+'); // Verifica se começa com '+'
+        const endValue = parseInt(numero.getAttribute('data-end-value'), 10);
+        const duration = 1; // Definir a duração total da contagem
+        const incrementTime = (duration * 1000) / endValue; // Tempo entre os incrementos
+        
+        let currentValue = 0;
+    
+        const updateNumber = () => {
+            if (currentValue <= endValue) {
+                numero.innerText = (hasPlus ? '+' : '') + currentValue; // Adiciona '+' se necessário
+                currentValue++;
+                setTimeout(updateNumber, incrementTime);
+            }
+        };
+    
+        // Usar GSAP para animar a contagem no scroll
+        gsap.fromTo(numero, 
+            { innerText: 0 }, 
+            { 
+                innerText: endValue,
+                duration: duration,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: numero,
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    toggleActions: 'play none none none',
+                    onEnter: updateNumber
+                }
+            }
+        );
+    });
+    
+    
+    
 };
