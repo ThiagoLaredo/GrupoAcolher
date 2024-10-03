@@ -30,10 +30,15 @@
   width: 20px;
 }
 
-.contact-info span {
+.contact-info a {
   font: 400 0.8rem/1.4 'Poppins', sans-serif;
   color: var(--textwhite);
   margin-right: 20px; /* Ajuste conforme necessário para mais espaço entre os itens */
+  transition: opacity 0.3s ease; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+.contact-info a:hover {
+  opacity: 0.7; /* Define a opacidade ao passar o mouse */
 }
 
 .social-instagram {
@@ -141,6 +146,13 @@ ul[data-menu="list"] {
   margin-left: 0;
   gap: 4px;
 }
+
+.sub-menu-programas {
+  background-color: var(--amarelo);
+  padding: 20px;
+  border-radius: 10px;
+}
+
 
 .sub-menu-programas li a {
   margin: 0;
