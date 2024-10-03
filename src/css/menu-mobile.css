@@ -54,10 +54,10 @@
   }
 
   #hamburguer {
-    width: 30px;
-    height: 2px;
+    width: 36px;
+    height: 4px;
     background: var(--azul);
-    border-radius: 1px;
+    border-radius: 4px;
     position: relative;
     transition: background 0.3s ease; /* Suaviza a transição da cor de fundo */
   }
@@ -66,21 +66,21 @@
   #hamburguer::after {
     content: "";
     display: block;
-    width: 30px;
-    height: 2px;
+    width: 36px;
+    height: 4px;
     background: var(--azul);
-    border-radius: 1px;
+    border-radius: 4px;
     position: absolute;
     left: 0;
     transition: transform 0.3s ease; /* Suaviza as transições de transformação */
   }
 
   #hamburguer::before {
-    top: -8px;
+    top: -10px;
   }
 
   #hamburguer::after {
-    top: 8px;
+    top: 10px;
   }
 
   /* Estilos quando o menu está ativo */
@@ -121,68 +121,26 @@
     gap: 10px;
   }
 
-  .js [data-menu="list"] a, .js [data-menu="list"] span, .js [data-menu="list"] .submenu a  {
+  .js [data-menu="list"] a, .js [data-menu="list"] span  {
     font-size: 20px;
     line-height: 1;
     width: 100vw;
   }
 
+  .js [data-menu="list"] .submenu a  {
+    font: 300 1rem/1 'OpenSans', sans-serif;
+    margin: 0;
+    text-transform: capitalize;  
+  }
+
+  
   .js [data-menu="list"] li {
     /* width: 100%; */
     position: relative;
   }
 
-  /* .js [data-menu="list"] li::after {
-    content: "";
-    display: block;
-    width: 100%;
-    top: 10px;
-    height: 1px;
-    border-radius: 5px;
-    background: rgba(52, 40, 64, 0.2);
-    position: relative;
-  } */
-
   .js [data-menu="list"] li:last-child::after {
     display: none;
   }
 
-  [data-menu="contato-mobile"], [data-menu="linkedin"], [data-menu="instagram"] {
-    display: none;
-  }
-
-  [data-menu="contato-mobile"].active  {
-    position: fixed;
-    font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--text);
-    display: block;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    padding: 1rem;
-    opacity: 0;
-  }
-
-  [data-menu="linkedin"].active {
-    position: fixed;
-    font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--text);
-    display: block;
-    bottom: 0;
-    right: 0;
-    z-index: 999;
-    padding: 1rem;
-    opacity: 0;
-  }
-  [data-menu="instagram"].active {
-    position: fixed;
-    font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--text);
-    display: block;
-    bottom: 0;
-    right: 40px;
-    z-index: 999;
-    padding: 1rem;
-    opacity: 0;
-  }
 }

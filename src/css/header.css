@@ -105,7 +105,7 @@ ul[data-menu="list"] {
 .submenu {
   display: none; /* Esconde o submenu por padrão */
   position: absolute; /* Usar absolute no desktop */
-  background-color: var(--bg-cinza);
+  background-color: var(--bg-laranja);
   list-style: none;
   padding: 20px;
   margin: 0;
@@ -143,7 +143,6 @@ ul[data-menu="list"] {
 }
 
 .sub-menu-programas li a {
-  font: 600 0.8rem/1.4 'OpenSans', sans-serif;
   margin: 0;
 }
 
@@ -217,16 +216,12 @@ ul[data-menu="list"] {
     display: none; /* Esconde o submenu por padrão no mobile */
     position: relative; /* Usar relative no mobile */
     border-radius: 0px;
-    background-color: #fff;
+    background-color: var(--laranja);
     padding: 5px 0;
   }
 
   .submenu li {
     padding: 0;
-  }
-
-  .sub-menu-programas li a {
-    font-weight: 200;
   }
 
   .submenu.active {
@@ -240,7 +235,6 @@ ul[data-menu="list"] {
   .has-submenu, .sub-menu-programas {
     display: flex;
     flex-direction: column;
-    gap: 10px;
   }
 
   .contact-info {
