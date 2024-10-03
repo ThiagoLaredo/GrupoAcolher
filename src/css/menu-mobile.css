@@ -14,18 +14,6 @@
   display: none;
 }
 
-[data-menu="contato-mobile"] {
- display: none;
-}
-
-[data-menu="linkedin"] {
-  display: none;
-}
-
-[data-menu="instagram"] {
-  display: none;
-}
-
 @media (max-width: 700px) {
 
   .social-icons-header {
@@ -133,7 +121,6 @@
     text-transform: capitalize;  
   }
 
-  
   .js [data-menu="list"] li {
     /* width: 100%; */
     position: relative;
