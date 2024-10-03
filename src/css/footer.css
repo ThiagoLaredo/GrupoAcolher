@@ -79,7 +79,7 @@
 .footer-contatos-lista {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espaçamento entre os itens */
+  gap: 20px; /* Espaçamento entre os itens */
 }
 
 .contato-item {
@@ -166,6 +166,12 @@
    flex-direction: column;
    text-align: center;
    justify-content: center;
+  } 
+  .contato-item {
+    flex-direction: column;
   }
-
+  
+   .footer-newsletter h3, .footer-redes-sobre p, .footer-redes-sobre h3 {
+    text-align: center;
+  }
 }

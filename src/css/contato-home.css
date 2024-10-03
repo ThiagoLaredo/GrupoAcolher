@@ -61,6 +61,14 @@
     gap: 60px;
   }
 
+  .fale-conosco-conteudo  {
+   align-items: center;
+   }
+  
+  .fale-conosco-info h3, .fale-conosco-info p, .fale-conosco-info li, .fale-conosco-info a {
+    text-align: center;
+  }
+
   .imagem-container {
     max-width: 100%;
     position: relative; /* Necessário para centralizar o retângulo */
