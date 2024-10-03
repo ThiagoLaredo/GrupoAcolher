@@ -253,7 +253,7 @@ ul[data-menu="list"] {
    gap: 10px
   }
 
-  .contact-info span {
+  .contact-info a {
     display: none;
   }
 
