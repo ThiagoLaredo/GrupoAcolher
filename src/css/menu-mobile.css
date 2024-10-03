@@ -108,7 +108,7 @@
     text-align: center;
     z-index: 3;
     height: 100vh;
-    background-color: var(--bg-cinza);
+    background-color: var(--amarelo);
   }
 
   .js [data-menu="list"].active, .js [data-menu="list"].submenu.active {
@@ -154,7 +154,7 @@
   [data-menu="contato-mobile"].active  {
     position: fixed;
     font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--roxo);
+    color: var(--text);
     display: block;
     bottom: 0;
     left: 0;
@@ -166,7 +166,7 @@
   [data-menu="linkedin"].active {
     position: fixed;
     font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--roxo);
+    color: var(--text);
     display: block;
     bottom: 0;
     right: 0;
@@ -177,7 +177,7 @@
   [data-menu="instagram"].active {
     position: fixed;
     font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--roxo);
+    color: var(--text);
     display: block;
     bottom: 0;
     right: 40px;
