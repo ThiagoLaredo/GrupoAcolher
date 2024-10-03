@@ -88,7 +88,7 @@
   gap: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
-.contato-item span {
+.contato-item a {
   font: 300 1rem 'Poppins', sans-serif;
   color: var(--textwhite); 
 }
@@ -156,6 +156,7 @@
   text-align: center;
 }
 
+
 @media (max-width: 600px) {
 
   .footer {
@@ -173,5 +174,10 @@
   
    .footer-newsletter h3, .footer-redes-sobre p, .footer-redes-sobre h3 {
     text-align: center;
+  }
+
+  .instagram-link {
+    display: flex;
+    justify-content: center;  
   }
 }
