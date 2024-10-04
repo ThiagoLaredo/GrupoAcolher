@@ -72,6 +72,7 @@
   .imagem-container {
     max-width: 100%;
     position: relative; /* Necessário para centralizar o retângulo */
+    flex: 1;  
   }
 
   .retangulo-azul {
@@ -86,5 +87,7 @@
 
   .imagem-ajustada {
     width: 100%; 
+    object-fit: cover;
+    height: 420px;
   }
 }

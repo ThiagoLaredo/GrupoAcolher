@@ -11,6 +11,8 @@ import "../css/contato-home.css";
 import "../css/footer.css";
 import "../css/menu-mobile.css";
 import "../css/cores.css";
+import "../css/componentes.css";
+import "../css/pg-servicos.css";
 
 import MenuMobile from './modules/menu-mobile.js';
 import { initPageOpenAnimations, initScrollAnimations } from './modules/animations.js';

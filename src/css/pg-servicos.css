@@ -1,0 +1,146 @@
+
+.introducao.intro-servicos {
+  display: flex;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100%;
+  background: url('../img/quebra-cabeca-azul.svg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;  
+  position: relative;
+}
+
+.introducao.intro-servicos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #1AAAB3 8%, #00DFED 100%);
+  z-index: -1; /* Certifique-se de que o overlay fique acima da imagem */
+}
+
+.servicos-todos {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 160px
+}
+
+.servico-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.row-reverse {
+  flex-direction: row-reverse; /* Inverte a ordem dos itens na direção da linha */
+}
+
+.servico-descritivo {
+  flex: 1;
+}
+
+.servico-descritivo h2 {
+  font-family: 'KidsMagic', sans-serif;
+  color: var(--text);
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.servico-descritivo p {
+  font: 300 1rem/1.6 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.imagem-container-servicos {
+  position: relative;
+  display: inline-block; /* Permite que o contêiner se ajuste ao tamanho da imagem */
+  flex: 1;
+  width: 100%;
+}
+
+.imagem-servico {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 20px 20px 20px;
+}
+
+.imagem-servico.imagem-left {
+  border-radius: 20px 0px 20px 20px;
+}
+
+.planos-container {
+  padding: 100px 20px;
+}
+
+.planos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--text);
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 40px; /* Espaçamento interno */
+}
+
+.planos h2 {
+  font: 600 2.2em/1 'Poppins', sans-serif;
+  text-align: center; /* Centraliza o parágrafo */
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.planos p {
+  font: 300 1em/1.6 'Poppins', sans-serif;
+  text-align: center; /* Centraliza o parágrafo */
+  margin-bottom: 40px;
+  color: var(--text);
+}
+
+.planos-logos {
+  display: flex;
+  justify-content: center; /* Centraliza os logos horizontalmente */
+  gap: 20px; /* Espaçamento entre os logos */
+}
+
+.planos-logos img {
+  max-width: 100px; /* Tamanho máximo dos logos */
+  height: auto; /* Mantém a proporção dos logos */
+}
+
+@media (max-width: 768px) {
+
+  .servicos-todos {
+    padding: 60px 20px;
+    gap: 60px
+  }
+
+  .servico-container {
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imagem-servico, .imagem-servico.imagem-left {
+    border-radius: 20px;
+  }
+
+  .planos-container {
+    padding: 0 20px 60px 20px;
+  }
+
+  .planos h2 {
+    font: 600 1.6em/1 'Poppins', sans-serif;
+  }
+
+}
+ 
