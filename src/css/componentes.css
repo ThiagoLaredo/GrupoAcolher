@@ -1,0 +1,63 @@
+.retangulo {
+  position: absolute;
+  top: -16%; /* Ajusta a posição do retângulo */
+  width: 42vw; /* Largura relativa à largura da viewport */
+  height: 24vw; /* Altura relativa à largura da viewport */
+  border-radius: 30vw; /* Bordas arredondadas relativas à largura da viewport */
+  z-index: -1; /* Coloca o retângulo atrás da imagem */
+}
+
+.retangulo.direita {
+  right: 0%; /* Ajusta a posição do retângulo */
+}
+
+.retangulo.esquerda {
+  left: 0%; /* Ajusta a posição do retângulo */
+}
+
+.retangulo.laranja {
+  background-color: var(--laranja);
+}
+
+.retangulo.azul {
+  background-color: var(--azul);
+}
+
+.retangulo.amarelo {
+  background-color: var(--amarelo);
+}
+
+/* Media queries para ajustar o tamanho e a posição dos retângulos em diferentes tamanhos de tela */
+@media (max-width: 768px) {
+  .retangulo {
+    top: -8%;
+    width: 70vw;
+    height: 40vw;
+    border-radius: 30vw;
+  }
+
+  .retangulo.direita {
+    left: 0;
+  }
+
+  .retangulo.esquerda {
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .retangulo {
+    top: -8%;
+    width: 90vw;
+    height: 50vw;
+    border-radius: 40vw;
+  }
+
+  .retangulo.direita {
+    left: 0;
+  }
+
+  .retangulo.esquerda {
+    left: 0;
+  }
+}
