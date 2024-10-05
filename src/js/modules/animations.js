@@ -62,21 +62,27 @@ export const initPageOpenAnimations = () => {
 };
 
 export const initScrollAnimations = () => {
+    // Seleciona todas as sections e o footer, exceto a introdução
     const sections = document.querySelectorAll('section:not(.introducao), footer');
     sections.forEach(section => {
-        gsap.from(section, {
-            scrollTrigger: {
-                trigger: section,
-                start: "top 80%",
-                end: "bottom 20%",
-                toggleActions: "play none none none"
-            },
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            ease: "power1.out"
+        // Aqui você pode escolher ser mais específico com os seletores dentro de cada section
+        const elements = section.querySelectorAll('.animate-me');
+        elements.forEach(element => {
+            gsap.from(element, {
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power1.out"
+            });
         });
     });
+
 
     const numeros = document.querySelectorAll('.numero');
     numeros.forEach(numero => {

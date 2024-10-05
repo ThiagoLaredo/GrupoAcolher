@@ -24,6 +24,11 @@
   z-index: -1; /* Certifique-se de que o overlay fique acima da imagem */
 }
 
+.intro-servicos h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
 .servicos-todos {
   padding: 100px 20px;
   display: flex;
@@ -67,7 +72,7 @@
 }
 
 .imagem-servico {
-  height: 400px;
+  height: 360px;
   width: 100%;
   object-fit: cover;
   border-radius: 0 20px 20px 20px;
@@ -131,6 +136,7 @@
   }
 
   .imagem-servico, .imagem-servico.imagem-left {
+    height: 260px;
     border-radius: 20px;
   }
 
