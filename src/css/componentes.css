@@ -8,11 +8,11 @@
 }
 
 .retangulo.direita {
-  right: 0%; /* Ajusta a posição do retângulo */
+  right: 7%; /* Ajusta a posição do retângulo */
 }
 
 .retangulo.esquerda {
-  left: 0%; /* Ajusta a posição do retângulo */
+  left: 7%; /* Ajusta a posição do retângulo */
 }
 
 .retangulo.laranja {
