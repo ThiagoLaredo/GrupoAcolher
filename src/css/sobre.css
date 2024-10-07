@@ -1,0 +1,84 @@
+.sobre {
+  padding: 100px 20px;
+  position: relative;
+}
+
+/* Novo elemento SVG */
+.introducao.pg-interna .svg-decorativo-treinamentos {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 1; /* Certifique-se de que o SVG fique acima do overlay, mas abaixo do texto */
+}
+
+.sobre-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sobre-descritivo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+  flex: 1;
+}
+
+.sobre-descritivo p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+  font: 300 1rem/1.6 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.sobre-imagens {
+  display: flex;
+  flex-wrap: wrap; /* Permite a quebra de linha se necessário */
+  gap: 40px; /* Espaçamento entre as imagens */
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  margin-top: -200px;
+}
+
+.sobre-img-1 {
+  max-width: 400px; /* Permite que as imagens se ajustem ao contêiner */
+  height: 320px; /* Mantém a proporção original */
+  flex: 1 1 calc(33% - 10px); /* Ajusta a base flex para preencher o espaço */
+  object-fit: cover; /* Mantém a proporção da imagem ao ajustar o tamanho */
+  border-radius: 200px 200px 0 0; 
+}
+
+.sobre-img-2 {
+  max-width: 400px; /* Permite que as imagens se ajustem ao contêiner */
+  height: 320px; /* Mantém a proporção original */
+  flex: 1 1 calc(33% - 10px); /* Ajusta a base flex para preencher o espaço */
+  object-fit: cover; /* Mantém a proporção da imagem ao ajustar o tamanho */
+  border-radius: 200px 0 0 200px; 
+}
+
+.decorativo-sobre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1; /* Certifique-se de que o SVG fique acima do overlay, mas abaixo do texto */
+}
+
+@media (max-width: 768px) {
+
+  .treinamentos {
+    padding: 60px 20px;
+  }
+
+  .introducao.pg-interna .svg-decorativo-treinamentos {
+   top:60px;
+  }
+
+  .treinamentos-descritivo {
+    width: 100%;
+  }
+
+  .retangulo-treinamentos {
+   display: none;
+  }
+}

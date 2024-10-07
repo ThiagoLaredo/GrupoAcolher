@@ -14,6 +14,8 @@ import "../css/cores.css";
 import "../css/componentes.css";
 import "../css/pg-servicos.css";
 import "../css/treinamentos.css";
+import "../css/sobre.css";
+
 
 import MenuMobile from './modules/menu-mobile.js';
 import { initPageOpenAnimations, initScrollAnimations } from './modules/animations.js';
