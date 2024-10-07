@@ -9,6 +9,7 @@
   // Função para criar instâncias do HtmlWebpackPlugin
   const pages = [
     'index',
+    'sobre',
     'servicos',
     'acoes',
     'treinamentos',
