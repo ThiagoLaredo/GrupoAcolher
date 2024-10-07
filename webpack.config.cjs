@@ -10,6 +10,7 @@
   const pages = [
     'index',
     'servicos',
+    'acoes',
     'blog'
   ];
 
