@@ -1,0 +1,64 @@
+.treinamentos {
+  padding: 100px 20px;
+  position: relative;
+}
+
+.treinamentos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.treinamentos-descritivo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+  width: 80%;
+}
+
+.treinamentos-descritivo h2 {
+  font-family: 'KidsMagic', sans-serif;
+  color: var(--text);
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+
+.treinamentos-descritivo p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+  font: 300 1rem/1.6 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.treinamentos-imagens {
+  display: flex;
+  flex-wrap: wrap; /* Permite a quebra de linha se necessário */
+  gap: 10px; /* Espaçamento entre as imagens */
+  justify-content: flex-start; /* Alinha imagens ao início do contêiner */
+}
+
+.treinamentos-imagens img {
+  max-width: 100%; /* Permite que as imagens se ajustem ao contêiner */
+  height: 260px; /* Mantém a proporção original */
+  flex: 1 1 calc(33% - 10px); /* Ajusta a base flex para preencher o espaço */
+  object-fit: cover; /* Mantém a proporção da imagem ao ajustar o tamanho */
+  border-radius: 10px; /* Estilo opcional para bordas arredondadas */
+}
+
+@media (max-width: 768px) {
+
+  .treinamentos {
+    padding: 60px 20px;
+  }
+  
+  .treinamentos-descritivo {
+    width: 100%;
+  }
+
+  .retangulo-treinamentos {
+   display: none;
+  }
+}
