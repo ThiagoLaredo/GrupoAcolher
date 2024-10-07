@@ -1,56 +1,27 @@
 .introducao.pg-interna {
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  height: 50vh; /* Ajusta a altura para 50% da altura da tela */
+  justify-content: flex-start;
+  height: 70vh;
   width: 100%;
+  /* background: url('../img/quebra-cabeca-azul.svg') no-repeat center center; */
+  background: linear-gradient(90deg, #1AAAB3 8%, #00DFED 100%);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; /* Permite o posicionamento absoluto dos elementos filhos */
-  overflow: hidden; /* Garante que o filtro não transborde da seção */
-}
-
-.introducao .wave-bottom, .introducao .wave-bottom-intro  {
-  position: absolute;
-  bottom: -10px; 
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 2; /* Fica acima da imagem de fundo */
-  overflow: hidden;
+  opacity: 0;  
+  position: relative;
 }
 
 .introducao.pg-interna::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgb(94, 74, 128);  */
-  background-color: rgba(52, 40, 64, 0.9);  ;
-  mix-blend-mode: multiply; /* Define o modo de mistura desejado */
-  z-index: 1; /* Fica atrás do texto, mas acima da imagem de fundo */
-  pointer-events: none; /* Garante que o filtro não interfira em interações do usuário */
-}
-
-.introducao.pg-interna::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit; /* Usa a mesma imagem de fundo */
-  background-size: inherit;
-  background-position: inherit;
-  background-repeat: inherit;
-  background-attachment: inherit;
-  /* filter: grayscale(50%);  */
-  background-color: rgba(52, 40, 64, 0.9);  ;
-  z-index: 0; /* Fica atrás da cor roxa e do texto */
+  background: linear-gradient(90deg, #1AAAB3 8%, #00DFED 100%);
+  z-index: -1; /* Certifique-se de que o overlay fique acima da imagem */
 }
 
 .introducao-texto.pg-interna {
@@ -67,25 +38,14 @@
   transform: translateY(8px); 
 }
 
-.programa__badge {
-  font: 600 0.75rem/1 'OpenSans', sans-serif;
-  color: var(--roxo);
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: var(--textwhite);
-  padding: 6px 12px;
-  z-index: 2; /* Mantém o badge visível sobre o fundo */
-}
-
-.wave-text.pg-interna {
-  font-size: 3.4rem;
-  font-weight: normal;
-  font-family: 'OpenDyslexic';
-  color: var(--textwhite);
-  text-align: left;
-  z-index: 2; /* Mantém o texto visível sobre o fundo */
-  max-width: none;
+/* Novo elemento SVG */
+.introducao.pg-interna .svg-decorativo {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 278px; /* Ajuste o tamanho conforme necessário */
+  height: 305px; /* Ajuste o tamanho conforme necessário */
+  z-index: 1; /* Certifique-se de que o SVG fique acima do overlay, mas abaixo do texto */
 }
 
 @media (max-width: 768px) { 
