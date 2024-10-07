@@ -3,6 +3,14 @@
   position: relative;
 }
 
+/* Novo elemento SVG */
+.introducao.pg-interna .svg-decorativo-treinamentos {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 1; /* Certifique-se de que o SVG fique acima do overlay, mas abaixo do texto */
+}
+
 .treinamentos-container {
   display: flex;
   flex-direction: column;
@@ -53,7 +61,11 @@
   .treinamentos {
     padding: 60px 20px;
   }
-  
+
+  .introducao.pg-interna .svg-decorativo-treinamentos {
+   top:60px;
+  }
+
   .treinamentos-descritivo {
     width: 100%;
   }
