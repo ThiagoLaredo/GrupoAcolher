@@ -11,7 +11,7 @@
     'index',
     'servicos',
     'acoes',
-    'treinamento',
+    'treinamentos',
     'contato',
     'blog'
   ];
