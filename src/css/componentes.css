@@ -15,27 +15,18 @@
   left: 7%; /* Ajusta a posição do retângulo */
 }
 
-.retangulo.laranja {
-  background-color: var(--laranja);
-}
-
-.retangulo.azul {
-  background-color: var(--azul);
-}
-
-.retangulo.amarelo {
-  background-color: var(--amarelo);
-}
+/* Cores dos retângulos */
+.retangulo.laranja { background-color: var(--laranja); }
+.retangulo.azul { background-color: var(--azul); }
+.retangulo.amarelo { background-color: var(--amarelo); }
 
 .retangulo-treinamentos {
   position: absolute;
-  top: 100px; /* Ajusta a posição do retângulo */
+  top: 100px;
   right: 0;
-  width: 20vw; /* Largura relativa à largura da viewport */
-  height: 22vw; /* Altura relativa à largura da viewport */
-  border-radius: 30vw 0 0 30vw;
-  z-index: -1; /* Coloca o retângulo atrás da imagem */
-  background-color: var(--amarelo);
+  width: 20vw;
+  height: 22vw;
+  z-index: -1;
 }
 
 /* Media queries para ajustar o tamanho e a posição dos retângulos em diferentes tamanhos de tela */
@@ -43,16 +34,14 @@
   .retangulo {
     top: -8%;
     width: 70vw;
-    height: 40vw;
-    border-radius: 30vw;
+    height: 35vw; /* Ajustado para manter a proporção */
+    border-radius: 25vw;
   }
 
-  .retangulo.direita {
-    left: 0;
-  }
-
+  .retangulo.direita,
   .retangulo.esquerda {
-    left: 0;
+    right: 0;
+    left: auto; /* Ajuste para centralizar se necessário */
   }
 }
 
@@ -60,40 +49,34 @@
   .retangulo {
     top: -8%;
     width: 90vw;
-    height: 50vw;
-    border-radius: 40vw;
-  }
-
-  .retangulo.direita {
-    left: 0;
-  }
-
-  .retangulo.esquerda {
-    left: 0;
+    height: 45vw; /* Ajustado para manter a proporção */
+    border-radius: 35vw;
   }
 }
 
-/* Media query para telas grandes */
 @media (min-width: 1200px) {
   .retangulo {
-    top: -22%; /* Ajusta a posição do retângulo */
-    width: 30vw; /* Largura relativa à largura da viewport */
-    height: 18vw; /* Altura relativa à largura da viewport */
-    border-radius: 20vw; /* Bordas arredondadas relativas à largura da viewport */
+    top: -20%; /* Ajustado para melhor visualização em telas grandes */
+    bottom: auto;
+    width: 42vw; /* Largura relativa à largura da viewport */
+    height: 24vw; /* Altura relativa à largura da viewport */
+    border-radius: 20vw;
   }
 
   .retangulo.direita {
-    right: 5%; /* Ajusta a posição do retângulo */
+    right: 12%;
+    left: auto;
   }
 
   .retangulo.esquerda {
-    left: 3%; /* Ajusta a posição do retângulo */
+    left: 12%;
+    right: auto;
   }
 
   .retangulo-treinamentos {
-    top: 120px; /* Ajusta a posição do retângulo */
-    width: 15vw; /* Largura relativa à largura da viewport */
-    height: 18vw; /* Altura relativa à largura da viewport */
+    top: 120px;
+    width: 15vw;
+    height: 18vw;
     border-radius: 20vw 0 0 20vw;
   }
 }
