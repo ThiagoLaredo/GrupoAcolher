@@ -61,4 +61,9 @@
     align-items: center; /* Alinha o texto à esquerda */
     margin-top: 100px;
   }
+
+  .introducao.pg-interna .svg-decorativo {
+    width: 139px; /* Metade do tamanho original */
+    height: 152.5px; /* Metade do tamanho original */
+  }
 }

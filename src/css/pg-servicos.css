@@ -135,6 +135,11 @@
     text-align: center;
   }
 
+  .intro-servicos h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
   .imagem-servico, .imagem-servico.imagem-left {
     height: 260px;
     border-radius: 20px;

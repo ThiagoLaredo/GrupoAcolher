@@ -1,0 +1,15 @@
+.contato {
+  padding: 160px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+@media (max-width: 768px) {
+  .contato {
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 20px;
+  }
+}
