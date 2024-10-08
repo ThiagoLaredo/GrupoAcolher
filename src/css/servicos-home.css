@@ -83,6 +83,7 @@
   }
   .lista-servicos {
     width: 100%; /* Ajusta para 100% em telas pequenas */
+    justify-content: center;
   }
 
   .lista-servicos li {
