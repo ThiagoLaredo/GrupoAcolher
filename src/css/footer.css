@@ -40,7 +40,7 @@
 
 .contato-form label {
   margin-bottom: 5px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #333; /* Cor do texto dos rótulos */
 }
 
@@ -50,7 +50,7 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contato-form button {
@@ -59,9 +59,14 @@
   border-radius: 5px;
   background-color: var(--laranja); /* Cor do botão */
   color: #ffffff;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
   text-align: center;
+  transition: background-color 0.3s ease; /* Adiciona transições suaves */
+}
+
+.contato-form button:hover {
+  background-color: #D97307; /* Tom mais claro de var(--laranja) */
 }
 
 .footer-colunas {
@@ -86,12 +91,18 @@
   display: flex;
   align-items: center;
   gap: 10px; /* Espaçamento entre o ícone e o texto */
+  transition: opacity 0.3s ease; /* Adiciona transições suaves */
+}
+
+.contato-item:hover {
+  opacity: 0.6;
 }
 
 .contato-item a {
   font: 300 1rem 'Poppins', sans-serif;
   color: var(--textwhite); 
 }
+
 
 .contato-item img {
   width: 24px; /* Largura do ícone */
@@ -146,7 +157,7 @@
 
 .newsletter-form button {
   display: inline-block;
-  background-color: var(--amarelo); 
+  background-color: #FFAF00; 
   color: #FFFFFF; 
   font: 600 1rem/1.8 'Poppins', sans-serif;
   padding: 10px 20px;
@@ -154,8 +165,14 @@
   text-decoration: none;
   margin-top: 10px;
   text-align: center;
+  cursor: pointer; /* Adiciona ponteiro de link */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona transições suaves */
 }
 
+.newsletter-form button:hover {
+  background-color: #FFC733; /* Tom mais claro de #FFAF00 */
+  transform: scale(1.05); /* Aumenta a escala */
+}
 
 @media (max-width: 600px) {
 

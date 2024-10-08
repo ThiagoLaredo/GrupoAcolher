@@ -21,11 +21,17 @@
 .fale-conosco-info h3 {
   font: 600 1.2rem 'Poppins', sans-serif;
   color: var(--text);
+  margin-bottom: 4px;
 } 
 
 .fale-conosco-info p, .fale-conosco-info a {
-  font: 300 1rem/1.6 'Poppins', sans-serif;
+  font: 300 1rem/1.8 'Poppins', sans-serif;
   color: var(--text);
+  transition: opacity 0.3s ease; /* Adiciona transição suave para opacidade */
+}
+
+.fale-conosco-info a:hover {
+  opacity: 0.7; /* Ajusta a opacidade no hover */
 }
 
 .imagem-container {

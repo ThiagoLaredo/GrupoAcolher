@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 gsap.registerPlugin(ScrollTrigger);
 
 export const initPageOpenAnimations = () => {
-    gsap.set([".contact-info", ".social-instagram a", ".header", "[data-menu='logo']", "[data-menu='button']", "#menu > li > a", "#menu > li > span", ".introducao-texto h1", ".introducao-texto p", ".introducao-texto a"], { opacity: 0 });
+    gsap.set([".contact-info", ".social-instagram a", ".header", "[data-menu='logo']", "[data-menu='button']", "#menu > li > a", "#menu > li > span", ".introducao-texto h1", ".introducao-texto p", ".introducao-texto a", ".svg-decorativo"], { opacity: 0 });
     
     gsap.to(".header", { duration: 1, opacity: 1, ease: "power1.inOut" });
     gsap.to(".contact-info", { duration: 1, delay: 0.2, opacity: 1, ease: "power1.inOut" });
@@ -13,6 +13,8 @@ export const initPageOpenAnimations = () => {
     gsap.to("[data-menu='button']", { duration: 1, delay: 0.7, opacity: 1, ease: "power1.inOut" });
     gsap.to(".introducao-texto p", { duration: 1, delay: 2, opacity: 1, ease: "power1.inOut" });
     gsap.to(".introducao-texto a", { duration: 1, delay: 2.2, opacity: 1, ease: "power1.inOut" });
+    gsap.to(".svg-decorativo", { duration: 1, delay: 2.4, opacity: 1, ease: "power1.inOut" });
+
 
     // Anima apenas os links e spans de primeiro nível, incluindo o <span>Serviços</span>
     gsap.to("#menu > li > a, #menu > li > span", { 
@@ -59,6 +61,25 @@ export const initPageOpenAnimations = () => {
             delay: 0.8
         });
     }
+        // Animação para o botão com a classe 'btn'
+    const btn = document.querySelectorAll(".btn");
+    btn.forEach(button => {
+        button.addEventListener("mouseenter", () => {
+            gsap.to(button, {
+                duration: 0.3,
+                backgroundColor: "#D97307", // Cor escurecida
+                scale: 1.1
+            });
+        });
+
+        button.addEventListener("mouseleave", () => {
+            gsap.to(button, {
+                duration: 0.3,
+                backgroundColor: "", // Volta à cor original
+                scale: 1
+            });
+        });
+    });
 };
 
 export const initScrollAnimations = () => {
