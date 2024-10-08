@@ -3,12 +3,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 60px;
 }
 
 .fale-conosco-conteudo  {
  display: flex;
  flex-direction: column;
  gap: 20px;
+ flex: 1
 }
 
 .fale-conosco-conteudo h2 {
