@@ -1,0 +1,227 @@
+.sobre {
+  padding: 100px 20px;
+  position: relative;
+}
+
+/* Novo elemento SVG */
+.introducao.pg-interna .svg-decorativo-treinamentos {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 1; /* Certifique-se de que o SVG fique acima do overlay, mas abaixo do texto */
+}
+
+.sobre-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sobre-descritivo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+  flex: 1;
+}
+
+.sobre-descritivo p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+  font: 300 1rem/1.6 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.sobre-imagens {
+  display: flex;
+  flex-wrap: wrap; /* Permite a quebra de linha se necessário */
+  gap: 40px; /* Espaçamento entre as imagens */
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  margin-top: -200px;
+}
+
+.sobre-img-1 {
+  max-width: 400px; /* Permite que as imagens se ajustem ao contêiner */
+  height: 320px; /* Mantém a proporção original */
+  flex: 1 1 calc(33% - 10px); /* Ajusta a base flex para preencher o espaço */
+  object-fit: cover; /* Mantém a proporção da imagem ao ajustar o tamanho */
+  border-radius: 200px 200px 0 0; 
+}
+
+.sobre-img-2 {
+  max-width: 400px; /* Permite que as imagens se ajustem ao contêiner */
+  height: 320px; /* Mantém a proporção original */
+  flex: 1 1 calc(33% - 10px); /* Ajusta a base flex para preencher o espaço */
+  object-fit: cover; /* Mantém a proporção da imagem ao ajustar o tamanho */
+  border-radius: 200px 0 0 200px; 
+}
+
+.decorativo-sobre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1; /* Certifique-se de que o SVG fique acima do overlay, mas abaixo do texto */
+}
+
+.selo {
+  padding: 100px 20px 0px 20px;
+}
+
+.selo-container {
+  padding: 40px;
+  border: 1px dotted var(--text);
+  border-radius: 20px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.selo-descritivo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selo-descritivo h2 {
+  font: 700 1.5rem 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.selo-descritivo p {
+  font: 300 1rem/1.6 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.porque {
+  padding: 100px 20px;
+}
+
+.porque-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.porque-descritivo,
+.porque-item {
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center; /* Garante que o conteúdo interno seja distribuído uniformemente */
+  align-items: flex-start;
+  height: 100%; /* Garante que os itens ocupem toda a altura disponível */
+}
+
+.porque-descritivo h2 {
+  font: 700 1.5rem 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.porque-descritivo p {
+  font: 300 1rem/1.6 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.porque-item h3 {
+  font: 700 1.2rem 'Poppins', sans-serif;
+  color: var(--textwhite);
+}
+
+.porque-item p {
+  font: 300 1rem/1.6 'Poppins', sans-serif;
+  color: var(--textwhite);
+}
+
+
+.btn-conheca-servicos {
+  display: inline-block;
+  color: var(--text); /* Fonte branca */
+  padding: 10px 20px 10px 0px; /* Espaçamento interno */
+  border-radius: 25px; /* Bordas arredondadas */
+  text-decoration: none;
+  font: 600 1rem 'Poppins', sans-serif; 
+  position: relative;
+}
+
+.btn-conheca-servicos::after {
+  content: '>'; /* Conteúdo da seta */
+  display: inline-block;
+  margin-left: 10px; /* Espaço entre o texto e a seta */
+  transition: margin-left 0.3s ease; /* Transição suave para o movimento da seta */
+  vertical-align: middle; /* Alinha a seta ao meio do texto */
+}
+
+.btn-conheca-servicos:hover::after {
+  margin-left: 15px; /* Move a seta para a direita ao passar o mouse */
+}
+
+/* Estilo específico para o primeiro, segundo e quinto .porque-item */
+.porque-item:nth-child(2),
+.porque-item:nth-child(3),
+.porque-item:nth-child(6) {
+  background-color: #FF5700; /* Cor de fundo específica */
+}
+
+/* Estilo para os outros itens */
+.porque-item:nth-child(4),
+.porque-item:nth-child(5) {
+  background-color: #29B5BE; /* Cor de fundo para os outros itens */
+}
+
+@media (max-width: 768px) {
+
+  .sobre, .porque {
+    padding: 60px 20px;
+  }
+  .selo {
+    padding: 60px 20px 0 20px;
+  }
+  
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-descritivo {
+    align-items: center;
+  }
+
+  .sobre-imagens {
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .sobre-img-1,
+  .sobre-img-2 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* Ajuste a borda para um visual mais uniforme */
+  }
+
+  .selo-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .porque-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .porque-descritivo,
+  .porque-item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .porque-descritivo {
+    padding: 0;
+  }
+}
