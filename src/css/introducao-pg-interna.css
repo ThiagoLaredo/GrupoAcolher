@@ -35,7 +35,7 @@
   max-width: 1200px; /* Ajusta o tamanho máximo do container para centralizar */
   width: 100%; /* Garante que o conteúdo não ultrapasse os limites do container */
   position: relative; /* Mantém o texto na hierarquia correta */
-  transform: translateY(8px); 
+  /* transform: translateY(8px);  */
 }
 
 /* Novo elemento SVG */
@@ -49,11 +49,16 @@
 }
 
 @media (max-width: 768px) { 
-  .introducao .wave-bottom {
-    bottom: -5px; 
+
+  .introducao.pg-interna {
+    height: 40vh;
   }
 
   .introducao-texto.pg-interna {
-    transform: translateY(30px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto verticalmente dentro do container */
+    align-items: center; /* Alinha o texto à esquerda */
+    margin-top: 100px;
   }
 }
