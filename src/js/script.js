@@ -12,9 +12,12 @@ import "../css/footer.css";
 import "../css/menu-mobile.css";
 import "../css/cores.css";
 import "../css/componentes.css";
-import "../css/pg-servicos.css";
-import "../css/treinamentos.css";
 import "../css/sobre.css";
+import "../css/pg-servicos.css";
+import "../css/acoes.css";
+import "../css/treinamentos.css";
+import "../css/blog.css";
+
 
 
 import MenuMobile from './modules/menu-mobile.js';

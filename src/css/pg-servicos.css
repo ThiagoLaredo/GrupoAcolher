@@ -30,7 +30,7 @@
 }
 
 .servicos-todos {
-  padding: 100px 20px;
+  padding: 160px 20px 0;
   display: flex;
   flex-direction: column;
   gap: 160px

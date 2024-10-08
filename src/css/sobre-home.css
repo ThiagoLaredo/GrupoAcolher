@@ -14,10 +14,11 @@
   font-family: 'KidsMagic', sans-serif;
   font-size: 2.5em;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .sobre-texto p {
-  font: 300 1.2rem/1.6 'Poppins', sans-serif;
+  font: 300 1rem/1.6 'Poppins', sans-serif;
   margin-bottom: 20px;
 }
 

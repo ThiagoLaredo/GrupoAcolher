@@ -2,6 +2,7 @@
   padding: 100px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .fale-conosco-conteudo  {
@@ -47,7 +48,7 @@
 
 
 .imagem-ajustada {
-  width: 90%; /* Diminui o tamanho da imagem */
+  width: 100%; /* Diminui o tamanho da imagem */
   height: auto;
   border-top-left-radius: 20px; /* Adiciona border-radius na ponta superior esquerda */
   border-radius: 0 20px 20px 20px;
