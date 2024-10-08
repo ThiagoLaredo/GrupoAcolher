@@ -62,8 +62,9 @@
     padding: 60px 20px;
   }
 
-  .introducao.pg-interna .svg-decorativo-treinamentos {
-   top:60px;
+  .svg-decorativo-treinamentos {
+    width: 88px; /* Metade do tamanho original */
+    height: 89px; /* Metade do tamanho original */
   }
 
   .treinamentos-descritivo {

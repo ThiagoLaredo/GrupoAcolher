@@ -1,4 +1,4 @@
-.acoes-lista {
+#acoes-lista {
   padding: 160px 20px 100px;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 768px) {
-  .acoes-lista {
+  #acoes-lista {
     padding: 60px 20px;
     gap: 60px
   }

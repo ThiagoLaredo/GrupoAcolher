@@ -17,6 +17,8 @@ import "../css/pg-servicos.css";
 import "../css/acoes.css";
 import "../css/treinamentos.css";
 import "../css/blog.css";
+import "../css/contato.css";
+
 
 
 
