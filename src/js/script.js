@@ -28,11 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
 
     // Inicializa o menu mobile com submenu integrado
-    const menuMobile = new MenuMobile(
-        '[data-menu="logo"]',
-        '[data-menu="button"]',
-        '[data-menu="list"]',      
-    );
+    const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]');
     if (menuMobile) {
         console.log('MenuMobile initialized successfully');
         menuMobile.init();
