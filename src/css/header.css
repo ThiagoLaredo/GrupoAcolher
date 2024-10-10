@@ -88,8 +88,7 @@ ul[data-menu="list"] {
   position: relative; /* Necessário para posicionar a seta */
 }
 
-.menu li a,
-.menu li span {
+.menu li a {
   font: 400 1rem/1.4 'Poppins', sans-serif;
   color: var(--text);
   font-weight: 600;
@@ -104,79 +103,68 @@ ul[data-menu="list"] {
   cursor: pointer; /* Aplica o cursor de mãozinha em todos os links e spans */
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+/* Estilo para o item de menu com submenu */
+.has-submenu {
+  position: relative; /* Necessário para posicionar absolutamente o submenu */
+}
 
-/* Estilo para o submenu - Desktop */
+.has-submenu > span {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.has-submenu:hover .submenu {
+  display: flex;
+  flex-direction: column; /* Exibe o submenu quando o mouse está sobre o item */
+  align-items: flex-start;
+}
+
+/* Estilo para o submenu */
 .submenu {
   display: none; /* Esconde o submenu por padrão */
-  position: absolute; /* Usar absolute no desktop */
+  position: absolute;
+  top: 100%; /* Posiciona logo abaixo do item do menu */
+  left: 0; /* Alinha o submenu à esquerda com o item do menu */
   list-style: none;
-  padding: 20px;
+  padding: 10px;
   margin: 0;
-  z-index: 1; /* Garante que o submenu esteja acima dos itens adjacentes */
-  border-radius: 12px;
+  z-index: 1000; /* Um valor alto para garantir que esteja acima de outros elementos */
+  border-radius: 8px; /* Bordas arredondadas para um visual moderno */
   white-space: nowrap;
-  width: auto; /* Ajusta a largura conforme necessário */
-  transition: all 0.3s ease; /* Adiciona uma transição suave para a expansão */
+  width: max-content; /* Ajusta a largura ao conteúdo, evitando quebra de linha */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden; /* Controla a visibilidade para a transição */
+  background-color: var(--amarelo); /* Substitua '--amarelo' pela cor desejada */
 }
 
+.has-submenu:hover .submenu {
+  opacity: 1;
+  visibility: visible; /* Torna o submenu visível no hover */
+}
+
+/* Estilo para os itens do submenu */
 .submenu li {
-  margin: 0;
-  padding: 0; /* Remove o padding da <li> */
+  padding: 2px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o hover */
 }
 
-.submenu li a {
-  color: var(--roxo);
-  text-decoration: none;
-  display: block;
-  padding: 10px 20px; /* Mova o padding para o <a> */
+.submenu li:hover {
+  background-color: var(--azul); /* Cor de fundo no hover */
+  color: #ffffff; /* Cor do texto no hover */
+  border-radius: 4px; /* Bordas arredondadas no hover */
 }
-
-.submenu li a:hover {
-  background-color: #fff;
-  border-radius: 12px;
-}
-
-.sub-menu-programas {
-  background-color: var(--amarelo);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.sub-menu-programas li,
-.sub-menu-programas ul {
-  padding: 0;
-  margin-left: 0;
-  gap: 4px;
-}
-
-.sub-menu-programas li a {
-  margin: 0;
-}
-
-/* Estilo para o item de menu com submenu */
-.has-submenu > span {
-  cursor: pointer; /* Aplica o cursor de mãozinha no hover */
-  display: flex; /* Transforma o span em flex container */
-  justify-content: center; /* Centraliza o texto horizontalmente */
-  align-items: center; /* Centraliza o texto verticalmente */
-  width: 100%; /* Garante que o span ocupe 100% da largura do menu */
-  padding: 10px 0; /* Adiciona espaçamento vertical */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-}
-
-.has-submenu {
-  position: relative; /* Necessário para posicionar a seta */
-}
-
 /* Estilo para a seta do submenu */
 .submenu-arrow {
   transition: transform 0.3s ease;
-  margin-left: 5px;
-  position: relative;
+  margin-left: auto; /* Empurra a seta para o lado direito */
 }
 
-.submenu-arrow.open {
-  transform: rotate(180deg); /* Rotação da seta para cima */
+.has-submenu > span:hover .submenu-arrow {
+  transform: rotate(180deg);
 }
 
 /* Exibir o submenu no hover para desktop */
@@ -219,35 +207,38 @@ ul[data-menu="list"] {
     display: none;
   }
 
-  .submenu {
-    display: none; /* Esconde o submenu por padrão no mobile */
-    position: relative; /* Usar relative no mobile */
-    border-radius: 0px;
-    background-color: var(--laranja);
-    padding: 5px 0;
+ .has-submenu {
+    position: relative; /* Garante que o z-index funcione corretamente */
   }
+
+  .has-submenu > span {
+    display: block;
+  }
+
+.submenu {
+  display: none;
+  position: relative; /* Usar relative no mobile */
+  top: 0; /* Reseta a posição top */
+  left: 0; /* Reseta a posição left */
+  width: 100vw; /* Assume a largura total do elemento pai */
+  background-color: var(--laranja);
+  z-index: 1050; /* Ajuste conforme necessário para garantir visibilidade */
+  padding: 0px;
+  margin: 0;
+  border-radius: 0px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.submenu.active {
+    display: block; /* Exibe o submenu quando ativado */
+    opacity: 1;
+    visibility: visible;
+}
 
   .submenu li {
-    padding: 0;
-  }
-
-  .submenu.active {
-    display: flex !important; /* Mostra o submenu quando ativo no mobile */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .has-submenu, .sub-menu-programas {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .sub-menu-programas {
-    background-color: var(--laranja);
-    padding: 0;
-    border-radius: 0;
+    width: 100%; /* Faz os itens ocuparem toda a largura */
+    text-align: center; /* Centraliza o texto */
+    padding: 0; /* Ajusta o padding */
   }
 
   .contact-info {
@@ -257,5 +248,4 @@ ul[data-menu="list"] {
   .contact-info a {
     display: none;
   }
-
 }
