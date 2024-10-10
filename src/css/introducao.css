@@ -52,6 +52,7 @@
   text-align: left;
   max-width: 40ch;
   z-index: 2;
+  letter-spacing: 2px;
 }
 
 .btn-saiba-mais {
@@ -78,7 +79,7 @@
     font-size: 2rem;
     line-height: 2.4rem;
     text-align: center;
-    letter-spacing: 0.1em;
+    letter-spacing: 2px;
   }
 
   .introducao-texto p {
