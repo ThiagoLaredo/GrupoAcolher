@@ -23,6 +23,19 @@
   color: var(--text);
 }
 
+.texto-destaque {
+  font: 700 1.5rem 'Poppins', sans-serif;
+  color: var(--laranja);
+}
+.texto-grifado {
+  font: 700 1.5rem 'Poppins', sans-serif;
+  background-color: rgba(255, 175, 0, 0.5); /* Cor de fundo semitransparente */
+  padding: 0 6px; /* Padding horizontal para espaçamento */
+  border-radius: 4px; /* Bordas arredondadas */
+  display: inline; /* Garante que o span se comporte como um elemento inline */
+  line-height: 1.5; /* Ajusta a altura da linha para centralizar o texto verticalmente */
+}
+
 .sobre-imagens {
   display: flex;
   flex-wrap: wrap; /* Permite a quebra de linha se necessário */
