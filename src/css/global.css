@@ -12,15 +12,11 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 button {
   all: unset;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 #bg-cinza {
