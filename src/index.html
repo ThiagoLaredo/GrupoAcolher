@@ -19,6 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+     <!-- Link para o CSS do Swiper (Se estiver usando CDN) -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     
     <script>document.documentElement.className += ' js';</script>
   </head>
@@ -137,7 +140,7 @@
       </div>
     </section>
     <section class="diferenciais">
-      <video autoplay muted loop class="video-background">
+      <video autoplay muted loop class="video-background animate-me">
         <source src="./img/video-diferenciais.MP4" type="video/mp4">
         Seu navegador não suporta o elemento de vídeo.
       </video>
@@ -159,7 +162,7 @@
       </div>
     </section>
 
-    <section class="galeria container">
+    <!-- <section class="galeria container">
       <h2 class="animate-me">DIA A DIA NA CLÍNICA ACOLHER</h2>
       <p class="animate-me">Nossos sorrisos</p>
       <div class="lista-galeria animate-me">
@@ -171,7 +174,39 @@
         <img src="./img/galeria/galeria_6.webp" alt="Foto de uma criança brincando com um terapeuta" width="300" height="300">
       </div>
       <a href="./galeria.html" class="btn btn-saiba-mais">Veja mais</a>
-    </section>
+    </section> -->
+
+    <section class="galeria container">
+      <div class="galeria-titulo">
+        <h2 class="animate-me">DIA A DIA NA CLÍNICA ACOLHER</h2>
+        <p class="animate-me">Nossos sorrisos</p>
+      </div>
+      
+      <!-- Swiper container -->
+    <div class="swiper-container">
+        <!-- Wrapper para os slides -->
+        <div class="swiper-wrapper animate-me">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="./img/galeria/galeria_11.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+          <div class="swiper-slide"><img src="./img/galeria/galeria_8.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+        
+          <div class="swiper-slide"><img src="./img/galeria/galeria_10.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+          <div class="swiper-slide"><img src="./img/galeria/galeria_2.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+          <div class="swiper-slide"><img src="./img/galeria/galeria_3.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+          <div class="swiper-slide"><img src="./img/galeria/galeria_5.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+          <div class="swiper-slide"><img src="./img/galeria/galeria_1.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+          <div class="swiper-slide"><img src="./img/galeria/galeria_6.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+          <div class="swiper-slide"><img src="./img/galeria/galeria_7.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+          <div class="swiper-slide"><img src="./img/galeria/galeria_9.webp" alt="Foto de uma criança brincando com um terapeuta"></div>
+        </div>
+      <!-- Se necessário, adicione controle de navegação -->
+      <div class="swiper-pagination animate-me"></div>
+      <div class="swiper-button-prev animate-me"></div>
+      <div class="swiper-button-next animate-me"></div>
+    </div>     
+      <!-- <a href="./galeria.html" class="btn btn-saiba-mais">Veja mais</a> -->
+  </section>
+  
 
     <section class="destaques-background">
       <div class="container destaques-lista animate-me">
@@ -196,16 +231,16 @@
 
     <section class="fale-conosco container">
       <div class="fale-conosco-conteudo animate-me">
-        <h2>FALE CONOSCO</h2>
-        <div class="fale-conosco-info">
+        <h2 class="animate-me">FALE CONOSCO</h2>
+        <div class="fale-conosco-info animate-me">
           <h3>Horários</h3>
           <p>Seg-Sex 08:00-17:00</p>
         </div>
-        <div class="fale-conosco-info">
+        <div class="fale-conosco-info animate-me">
           <h3>Endereço</h3>
           <p>Av. Historiador Pereira da Costa, 841<br> Cabo de Santo Agostinho, Pernambuco</p>
         </div>
-        <div class="fale-conosco-info">
+        <div class="fale-conosco-info animate-me">
           <h3>Telefone</h3>
           <ul>
             <li><a href="tel:+558132995499" target="_blank">Telefone: (81) 3299-5499</a></li>
@@ -213,7 +248,7 @@
             <li><a href="mailto:rh@grupoacolher.com" target="_blank">Trabalhe conosco: rh@grupoacolher.com</a></li>
           </ul>     
         </div>
-        <div class="fale-conosco-info">
+        <div class="fale-conosco-info animate-me">
           <h3>Siga-nos</h3>
           <a href="">Instagram</a>
         </div>  
@@ -288,5 +323,43 @@
     <a href="https://wa.me/5581999141200" class="whatsapp-float" target="_blank">
       <img src="./img/whatsapp-icon2.svg" alt="WhatsApp" class="whatsapp-icon">
     </a>
+   <!-- Swiper JS -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- Seu script de inicialização -->
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // Permite que os bullets sejam clicáveis
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+            }
+        });
+    });
+    </script>
   </body>
 </html>

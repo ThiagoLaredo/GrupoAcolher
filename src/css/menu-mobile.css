@@ -126,18 +126,9 @@
     gap: 10px;
   }
 
-  /* .js [data-menu="list"] span {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 0 15px; 
-    font-size: 20px;
-    line-height: 1;
-  } */
 
   .submenu-arrow {
     margin-left: auto; /* Mantém a seta no extremo direito, mas mais próxima do texto */
-    /* margin-right: 15px;  */
   }
 
   .js [data-menu="list"] .submenu a  {

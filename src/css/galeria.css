@@ -1,12 +1,17 @@
 .galeria {
   padding: 100px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 20px;
+  /* position: relative; */
 }
 
-.galeria h2 {
+.galeria-titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.galeria-titulo h2 {
   font-family: 'KidsMagic', sans-serif;
   color: var(--text);
   font-size: 2.5em;
@@ -14,22 +19,83 @@
   text-align: center;
 } 
 
-.galeria p {
+.galeria-titulo p {
   font: 400 1rem/1.6 'Poppins', sans-serif;
   color: var(--text);
+  text-align: center;
 } 
 
-.lista-galeria {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Define 3 colunas */
-  gap: 20px;
-}  
+.swiper-slide img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
 
-.lista-galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-} 
+.swiper-container {
+  position: relative;
+}
+
+/* Estilo básico para os botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    background-color: var(--amarelo); /* Cor de fundo com transparência */
+    border-radius: 50%; /* Botões arredondados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Cor do ícone */
+    font-size: 20px; /* Tamanho do ícone */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo básico para os botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 50px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    background-color: #FFAF00; /* Cor de fundo com transparência */
+    border-radius: 50%; /* Botões arredondados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Cor do ícone */
+    font-size: 20px; /* Tamanho do ícone */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo para o botão "next" */
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 24px; /* Tamanho da seta */
+}
+
+/* Estilo para o hover dos botões */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #CC8C00; /* Cor de fundo no hover */
+}
+
+/* Estilo básico para os bullets de navegação */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 175, 0, 0.5); /* Cor com transparência */
+  opacity: 1;
+  border-radius: 50%; /* Forma circular */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para cor e transformação */
+  margin: 0 5px; /* Espaçamento entre os bullets */
+  position: relative;
+  top: 40px; /* Ajuste de posição */
+}
+
+/* Estilo para o bullet ativo */
+.swiper-pagination-bullet-active {
+  background-color: rgba(255, 175, 0, 1); /* Cor sólida */
+  transform: scale(1.2); /* Aumenta o tamanho do bullet ativo */
+  box-shadow: 0 0 10px rgba(255, 175, 0, 0.5); /* Adiciona uma sombra ao bullet ativo */
+}
 
 
 @media (max-width: 768px) {
@@ -38,7 +104,5 @@
     padding: 60px 20px;
   }
   
-  .lista-galeria {
-    grid-template-columns: repeat(2, 1fr); /* Define 3 colunas */
-  }  
+ 
 }

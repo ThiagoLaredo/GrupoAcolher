@@ -18,10 +18,7 @@ import "../css/acoes.css";
 import "../css/treinamentos.css";
 import "../css/blog.css";
 import "../css/contato.css";
-
-
-
-
+// import SwiperGallery from './modules/swiper.js';
 import MenuMobile from './modules/menu-mobile.js';
 import { initPageOpenAnimations, initScrollAnimations } from './modules/animations.js';
 
@@ -45,4 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initPageOpenAnimations();
     initScrollAnimations();
+
+    // const gallery = new SwiperGallery('.swiper-container', {
+    //     // Aqui você pode passar opções personalizadas se necessário
+    // });
+    // gallery.initialize();
+
 });
