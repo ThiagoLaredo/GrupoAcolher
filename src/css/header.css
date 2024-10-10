@@ -168,7 +168,7 @@ ul[data-menu="list"] {
 }
 
 /* Exibir o submenu no hover para desktop */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .has-submenu:hover .submenu {
     display: flex !important; /* Mostra o submenu no hover */
     gap: 4px;
