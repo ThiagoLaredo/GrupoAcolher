@@ -14,6 +14,7 @@ export default class initScrollSuave {
           const hash = href.split('#')[1];
 
           // Verifica se o link é para a própria página ou se contém o hash
+          // A URL pode ou não conter .html, por isso verificamos ambos os casos
           if (window.location.pathname.includes('servicos') && hash) {
             event.preventDefault();
             this.scrollToSection(`#${hash}`);
