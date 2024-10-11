@@ -21,10 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-#bg-cinza {
-  background-color: var(--bg-cinza);
-}
-
 * {
   box-sizing: border-box;
 }
