@@ -22,7 +22,7 @@ import "../css/contato.css";
 // import SwiperGallery from './modules/swiper.js';
 import MenuMobile from './modules/menu-mobile.js';
 import { initPageOpenAnimations, initScrollAnimations } from './modules/animations.js';
-
+import initScrollSuave from './modules/scrollSuave.js';
 
 // Função principal de inicialização
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initPageOpenAnimations();
     initScrollAnimations();
+
+  // Inicializa a rolagem suave na página de serviços
+ // Verifica se estamos na página 'servicos.html'
+ if (window.location.pathname.includes('servicos.html')) {
+    console.log('Inicializando rolagem suave na página de serviços');
+    new initScrollSuave();
+  }
 
     // const gallery = new SwiperGallery('.swiper-container', {
     //     // Aqui você pode passar opções personalizadas se necessário

@@ -17,8 +17,8 @@ button {
   all: unset;
 }
 
-#bg-cinza {
-  background-color: var(--bg-cinza);
+body {
+  overflow-x: hidden;
 }
 
 * {
