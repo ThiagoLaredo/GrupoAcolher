@@ -10,6 +10,7 @@ import "../css/destaques.css";
 import "../css/contato-home.css";
 import "../css/footer.css";
 import "../css/menu-mobile.css";
+import "../css/submenu.css";
 import "../css/cores.css";
 import "../css/componentes.css";
 import "../css/sobre.css";

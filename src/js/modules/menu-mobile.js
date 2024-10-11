@@ -51,82 +51,96 @@ export default class MenuMobile {
     }
   }
 
+  // handleSubmenuClick() {
+  //   const submenuItems = this.menuList.querySelectorAll('.has-submenu > span');
+  //   submenuItems.forEach(item => {
+  //     const parent = item.closest('.has-submenu');
+  //     const submenu = parent ? parent.querySelector('.submenu') : null;
+      
+  //     // Verifica se o elemento de seta já existe, caso contrário, cria um novo SVG
+  //     let arrow = item.querySelector('.submenu-arrow');
+  //     if (!arrow) {
+  //       const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  //       svg.setAttribute('class', 'submenu-arrow');
+  //       svg.setAttribute('width', '20');
+  //       svg.setAttribute('height', '20');
+  //       svg.setAttribute('viewBox', '0 0 24 24');
+  //       svg.setAttribute('fill', 'none');
+  //       svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  
+  //       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  //       path.setAttribute('d', 'M8 10l4 4 4-4');
+  //       path.setAttribute('stroke', 'currentColor');
+  //       path.setAttribute('stroke-width', '2');
+  //       path.setAttribute('stroke-linecap', 'round');
+  //       path.setAttribute('stroke-linejoin', 'round');
+  //       svg.appendChild(path);
+  
+  //       item.appendChild(svg);
+  //       arrow = svg; // Atualiza a referência da seta para o SVG recém-criado
+  //     }
+  
+  //     if (submenu && arrow) {
+  //       // Lógica para alternar submenu no clique apenas no mobile
+  //       item.addEventListener('click', (e) => {
+  //         if (this.isMobile()) {
+  //           e.preventDefault();
+  //           e.stopPropagation(); // Evita o fechamento ao clicar no item do submenu
+  
+  //           // Alterna entre abrir e fechar o submenu
+  //           const isActive = submenu.classList.contains('active');
+            
+  //           if (isActive) {
+  //             // Animação para fechar o submenu
+  //             gsap.to(submenu, { 
+  //               height: 0, 
+  //               opacity: 0, 
+  //               duration: 0.3, 
+  //               ease: "power2.inOut",
+  //               onComplete: () => submenu.classList.remove('active')
+  //             });
+  //           } else {
+  //             // Define a altura automática antes da animação
+  //             gsap.set(submenu, { height: 'auto', display: 'block' });
+  //             const fullHeight = submenu.offsetHeight + "px"; // Captura a altura do submenu
+  //             gsap.fromTo(submenu, 
+  //               { height: 0, opacity: 0 }, 
+  //               { height: fullHeight, opacity: 1, duration: 0.3, ease: "power2.inOut", onComplete: () => submenu.classList.add('active') }
+  //             );
+  //           }
+  
+  //           // Alterna a rotação da seta
+  //           arrow.classList.toggle('open', !isActive);
+  //         }
+  //       });
+  
+  //       // Lógica para alternar rotação da seta no hover para desktop
+  //       if (!this.isMobile()) {
+  //         item.addEventListener('mouseover', () => {
+  //           arrow.classList.add('open'); // Rotaciona a seta para cima no hover
+  //         });
+  //         item.addEventListener('mouseout', () => {
+  //           arrow.classList.remove('open'); // Retorna a seta ao estado normal
+  //         });
+  //       }
+  //     }
+  //   });
+  // }
   handleSubmenuClick() {
     const submenuItems = this.menuList.querySelectorAll('.has-submenu > span');
     submenuItems.forEach(item => {
-      const parent = item.closest('.has-submenu');
-      const submenu = parent ? parent.querySelector('.submenu') : null;
-      
-      // Verifica se o elemento de seta já existe, caso contrário, cria um novo SVG
-      let arrow = item.querySelector('.submenu-arrow');
-      if (!arrow) {
-        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        svg.setAttribute('class', 'submenu-arrow');
-        svg.setAttribute('width', '20');
-        svg.setAttribute('height', '20');
-        svg.setAttribute('viewBox', '0 0 24 24');
-        svg.setAttribute('fill', 'none');
-        svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-  
-        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('d', 'M8 10l4 4 4-4');
-        path.setAttribute('stroke', 'currentColor');
-        path.setAttribute('stroke-width', '2');
-        path.setAttribute('stroke-linecap', 'round');
-        path.setAttribute('stroke-linejoin', 'round');
-        svg.appendChild(path);
-  
-        item.appendChild(svg);
-        arrow = svg; // Atualiza a referência da seta para o SVG recém-criado
-      }
-  
-      if (submenu && arrow) {
-        // Lógica para alternar submenu no clique apenas no mobile
-        item.addEventListener('click', (e) => {
-          if (this.isMobile()) {
-            e.preventDefault();
-            e.stopPropagation(); // Evita o fechamento ao clicar no item do submenu
-  
-            // Alterna entre abrir e fechar o submenu
-            const isActive = submenu.classList.contains('active');
-            
-            if (isActive) {
-              // Animação para fechar o submenu
-              gsap.to(submenu, { 
-                height: 0, 
-                opacity: 0, 
-                duration: 0.3, 
-                ease: "power2.inOut",
-                onComplete: () => submenu.classList.remove('active')
-              });
-            } else {
-              // Define a altura automática antes da animação
-              gsap.set(submenu, { height: 'auto', display: 'block' });
-              const fullHeight = submenu.offsetHeight + "px"; // Captura a altura do submenu
-              gsap.fromTo(submenu, 
-                { height: 0, opacity: 0 }, 
-                { height: fullHeight, opacity: 1, duration: 0.3, ease: "power2.inOut", onComplete: () => submenu.classList.add('active') }
-              );
+        const link = item.querySelector('a'); // Seleciona o link "Serviços"
+
+        link.addEventListener('click', (e) => {
+            if (this.isMobile()) {
+                // No mobile, o link redireciona diretamente
+                window.location.href = link.href;
             }
-  
-            // Alterna a rotação da seta
-            arrow.classList.toggle('open', !isActive);
-          }
         });
-  
-        // Lógica para alternar rotação da seta no hover para desktop
-        if (!this.isMobile()) {
-          item.addEventListener('mouseover', () => {
-            arrow.classList.add('open'); // Rotaciona a seta para cima no hover
-          });
-          item.addEventListener('mouseout', () => {
-            arrow.classList.remove('open'); // Retorna a seta ao estado normal
-          });
-        }
-      }
     });
-  }
-  
+}
+
+
 
   addMenuMobileEvents() {
     this.menuButton.addEventListener('click', this.openMenu);
