@@ -29,7 +29,7 @@ export default class initScrollSuave {
     if (section) {
       section.scrollIntoView({
         behavior: 'smooth',
-        block: 'end',  // Centraliza a seção na página
+        block: 'end',  // Alinha a seção no fim da janela
       });
     }
   }
@@ -44,7 +44,7 @@ export default class initScrollSuave {
         setTimeout(() => {
           section.scrollIntoView({
             behavior: 'smooth',
-            block: 'end',  // Centraliza a seção na página
+            block: 'end',  // Alinha a seção no fim da janela
           });
         }, 100);  // Pequeno atraso para garantir que a página carregue completamente
       }
