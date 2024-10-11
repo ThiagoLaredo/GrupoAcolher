@@ -1,0 +1,127 @@
+/* Estilo para o item de menu com submenu */
+.has-submenu {
+  position: relative; /* Necessário para posicionar absolutamente o submenu */
+}
+
+.has-submenu > span {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.has-submenu:hover .submenu {
+  display: flex;
+  flex-direction: column; /* Exibe o submenu quando o mouse está sobre o item */
+  align-items: flex-start;
+}
+
+/* Estilo para o submenu no desktop */
+.submenu {
+  display: none; /* Esconde o submenu por padrão */
+  position: absolute;
+  top: 100%; /* Posiciona logo abaixo do item do menu */
+  left: 0; /* Alinha o submenu à esquerda com o item do menu */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  z-index: 1000; /* Um valor alto para garantir que esteja acima de outros elementos */
+  border-radius: 8px; /* Bordas arredondadas para um visual moderno */
+  white-space: nowrap;
+  width: max-content; /* Ajusta a largura ao conteúdo, evitando quebra de linha */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden; /* Controla a visibilidade para a transição */
+  background-color: var(--amarelo); /* Substitua '--amarelo' pela cor desejada */
+}
+
+.has-submenu:hover .submenu {
+  opacity: 1;
+  visibility: visible; /* Torna o submenu visível no hover */
+}
+
+/* Estilo para os itens do submenu */
+.submenu li {
+  padding: 2px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o hover */
+}
+
+.submenu li:hover {
+  background-color: var(--azul); /* Cor de fundo no hover */
+  color: #ffffff; /* Cor do texto no hover */
+  border-radius: 4px; /* Bordas arredondadas no hover */
+}
+
+/* Estilo para a seta do submenu */
+.submenu-arrow {
+  transition: transform 0.3s ease;
+  margin-left: auto; /* Empurra a seta para o lado direito */
+}
+
+.has-submenu > span:hover .submenu-arrow {
+  transform: rotate(180deg);
+}
+
+/* Comportamento no hover para desktop */
+@media (min-width: 769px) {
+  .submenu {
+    display: none; /* Esconde o submenu no desktop por padrão */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    background-color: var(--amarelo);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .has-submenu:hover .submenu {
+    display: flex; /* Mostra o submenu no hover */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Rotaciona a seta no hover para o desktop */
+  .has-submenu:hover .submenu-arrow {
+    transform: rotate(180deg); /* Rotação da seta para cima */
+  }
+}
+
+/* Mobile - Sempre exibir o submenu no mobile */
+@media (max-width: 768px) {
+  .has-submenu {
+    position: relative; /* Garante que o z-index funcione corretamente */
+  }
+
+  .has-submenu > span {
+    display: block;
+  }
+
+  .submenu {
+    display: block; /* Exibe o submenu por padrão no mobile */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--laranja);
+    z-index: 1050;
+    padding: 0;
+    margin: 0;
+    opacity: 1; /* Garante que o submenu seja visível no mobile */
+    visibility: visible; /* Submenu visível no mobile */
+    border-radius: 0;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+    transition: none; /* Remove transições no mobile */
+  }
+
+  .submenu li {
+    width: 100%; /* Faz os itens ocuparem toda a largura */
+    text-align: center; /* Centraliza o texto */
+    padding: 0; /* Ajusta o padding */
+  }
+}
