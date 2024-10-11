@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inicializa a rolagem suave na página de serviços
  // Verifica se estamos na página 'servicos.html'
- if (window.location.pathname.includes('servicos.html')) {
+ if (window.location.pathname.includes('servicos')) {
     console.log('Inicializando rolagem suave na página de serviços');
     new initScrollSuave();
   }
