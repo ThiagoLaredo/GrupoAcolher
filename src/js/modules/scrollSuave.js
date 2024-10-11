@@ -29,7 +29,7 @@ export default class initScrollSuave {
     if (section) {
       section.scrollIntoView({
         behavior: 'smooth',
-        block: 'end',  // Centraliza a seção na página
+        block: '',  // Centraliza a seção na página
       });
     }
   }

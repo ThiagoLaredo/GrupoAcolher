@@ -54,29 +54,86 @@
   }
 }
 
-@media (min-width: 1200px) {
+/* Estilos base para dispositivos móveis (menores que 768px) */
+.retangulo {
+  width: 80vw; /* Maior percentual da tela */
+  height: 40vw;
+  border-radius: 10vw;
+}
+
+.retangulo.direita, .retangulo.esquerda {
+  left: 10%; /* Centraliza com um pouco de margem */
+}
+
+.retangulo-treinamentos {
+  width: 70vw;
+  height: 35vw;
+  border-radius: 10vw 0 0 10vw;
+}
+
+/* Estilos para tablets (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
   .retangulo {
-    top: -20%; /* Ajustado para melhor visualização em telas grandes */
-    bottom: auto;
-    width: 42vw; /* Largura relativa à largura da viewport */
-    height: 24vw; /* Altura relativa à largura da viewport */
-    border-radius: 20vw;
+      width: 50vw;
+      height: 25vw;
+      border-radius: 10vw;
   }
 
   .retangulo.direita {
-    right: 12%;
-    left: auto;
+      right: 10%;
   }
 
   .retangulo.esquerda {
-    left: 12%;
-    right: auto;
+      left: 10%;
   }
 
   .retangulo-treinamentos {
-    top: 120px;
-    width: 15vw;
-    height: 18vw;
-    border-radius: 20vw 0 0 20vw;
+      width: 40vw;
+      height: 30vw;
+      border-radius: 10vw 0 0 10vw;
+  }
+}
+
+/* Estilos para desktops pequenos e médios (992px a 1439px) */
+@media (min-width: 992px) and (max-width: 1439px) {
+  .retangulo {
+      width: calc(30vw + 140px);
+      height: calc(18vw + 30px);
+  }
+
+  .retangulo.direita {
+      right: -15%;
+  }
+
+  .retangulo.esquerda {
+      left: 15%;
+  }
+
+  .retangulo-treinamentos {
+      width: calc(20vw + 30px);
+      height: calc(24vw + 20px);
+      border-radius: 20vw 0 0 20vw;
+  }
+}
+
+/* Estilos para desktops grandes (1440px e acima) */
+@media (min-width: 1440px) {
+  .retangulo {
+      width: 35vw; /* Controle sobre o tamanho máximo */
+      height: 20vw;
+  }
+
+  .retangulo.direita {
+      right: 12%;
+  }
+
+  .retangulo.esquerda {
+      left: 12%;
+  }
+
+  .retangulo-treinamentos {
+      width: 15vw;
+      height: 18vw;
+      border-radius: 20vw 0 0 20vw;
   }
 }
