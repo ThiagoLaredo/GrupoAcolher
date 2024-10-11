@@ -11,12 +11,16 @@ export default class initScrollSuave {
       this.linksInternos.forEach((link) => {
         link.addEventListener('click', (event) => {
           const href = event.currentTarget.getAttribute('href');
+          const hash = href.split('#')[1];
 
-          // Verifica se o link é para a própria página ou se contém um hash
-          if (href.startsWith('#') || href.includes(window.location.pathname)) {
+          // Verifica se o link é para a própria página ou se contém o hash
+          if (window.location.pathname.includes('servicos') && hash) {
             event.preventDefault();
-            const hash = href.split('#')[1];
             this.scrollToSection(`#${hash}`);
+            window.history.pushState(null, null, `#${hash}`); // Atualiza a hash na URL
+          } else {
+            // Caso esteja em outra página, apenas permite a navegação normal
+            window.location.href = href; // Redireciona normalmente para outra página
           }
         });
       });
