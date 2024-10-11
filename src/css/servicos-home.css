@@ -43,6 +43,7 @@
   box-sizing: border-box;
   margin: 1%; 
 }
+
 .lista-servicos a {
   display: flex;
   align-items: center;
@@ -59,9 +60,12 @@
   transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona transições suaves */
 }
 
-.lista-servicos a:hover {
-  background-color: #D97307; /* Tom mais escuro de var(--laranja) */
-  transform: scale(1.05); /* Aumenta a escala */
+/* Efeitos de hover em dispositivos que suportam hover (desktops) */
+@media (hover: hover) {
+  .lista-servicos a:hover {
+    background-color: #D97307; /* Tom mais escuro de var(--laranja) */
+    transform: scale(1.05); /* Aumenta a escala */
+  }
 }
 
 .servicos-img {
