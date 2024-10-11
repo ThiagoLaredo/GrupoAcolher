@@ -25,6 +25,10 @@
   text-align: center;
 } 
 
+.swiper-container {
+  overflow-x: hidden;
+}
+
 .swiper-slide img {
   width: 400px;
   height: 200px;
