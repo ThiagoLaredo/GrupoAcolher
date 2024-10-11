@@ -69,6 +69,10 @@
 
 @media (max-width: 768px) { 
 
+  .introducao {
+    background-attachment: scroll;
+  }
+
   .introducao-texto {
     margin-top: 60px;
     align-items: center;
