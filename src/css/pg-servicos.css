@@ -76,6 +76,7 @@
   width: 100%;
   object-fit: cover;
   border-radius: 0 20px 20px 20px;
+  position: relative;
 }
 
 .imagem-servico.imagem-left {
@@ -143,14 +144,27 @@
   .imagem-servico, .imagem-servico.imagem-left {
     height: 260px;
     border-radius: 20px;
+    border-radius: 0px 0px 20px 20px;
   }
 
   .planos-container {
     padding: 0 20px 60px 20px;
   }
 
+  .planos {
+    padding: 20px;
+  }
+
   .planos h2 {
     font: 600 1.6em/1 'Poppins', sans-serif;
+  }
+
+  .planos-logos {
+    flex-direction: column;
+  }
+  
+  .planos-logos img {
+    max-width: 100%; /* Tamanho máximo dos logos */
   }
 
 }

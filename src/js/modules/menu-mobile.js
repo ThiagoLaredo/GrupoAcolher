@@ -23,34 +23,37 @@ export default class MenuMobile {
 
   openMenu(event) {
     if (this.isMobile()) {
-      event.stopPropagation(); // Impede a propagação do evento para o documento apenas em mobile
-      console.log('Menu button clicked on mobile');
-      
-      if (this.menuOpened) {
-        console.log('Menu already opened, closing menu now');
-        this.closeMenu();
-      } else {
-        console.log('Opening menu on mobile');
-        this.menuOpened = true;
-        this.menuList.classList.add(this.activeClass);
-        this.menuButton.classList.add(this.activeClass);
-        this.whatsappIcon.classList.add('hidden'); // Adiciona a classe 'hidden' ao ícone do WhatsApp
-        this.animateMenuItems();
-        this.toggleMenuAnimation(true);
-      }
-    }
-  }
+        event.stopPropagation();
+        console.log('Menu button clicked on mobile');
 
-  closeMenu() {
-    if (this.isMobile()) {
-      console.log('Closing menu on mobile');
-      this.menuOpened = false;
-      this.menuList.classList.remove(this.activeClass);
-      this.menuButton.classList.remove(this.activeClass);
-      this.whatsappIcon.classList.remove('hidden'); // Remove a classe 'hidden' do ícone do WhatsApp
-      this.toggleMenuAnimation(false);
+        if (this.menuOpened) {
+            console.log('Menu already opened, closing menu now');
+            this.closeMenu();
+        } else {
+            console.log('Opening menu on mobile');
+            this.menuOpened = true;
+            this.menuList.classList.add(this.activeClass);
+            this.menuButton.classList.add(this.activeClass);
+            this.whatsappIcon.classList.add('hidden');
+            document.querySelector('.header-contacts-background').classList.add('hidden'); // Esconde o header
+            this.animateMenuItems();
+            this.toggleMenuAnimation(true);
+        }
     }
-  }
+}
+
+closeMenu() {
+    if (this.isMobile()) {
+        console.log('Closing menu on mobile');
+        this.menuOpened = false;
+        this.menuList.classList.remove(this.activeClass);
+        this.menuButton.classList.remove(this.activeClass);
+        this.whatsappIcon.classList.remove('hidden');
+        document.querySelector('.header-contacts-background').classList.remove('hidden'); // Mostra o header
+        this.toggleMenuAnimation(false);
+    }
+}
+
 
   // handleSubmenuClick() {
   //   const submenuItems = this.menuList.querySelectorAll('.has-submenu > span');
