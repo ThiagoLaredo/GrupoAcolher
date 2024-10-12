@@ -8,11 +8,11 @@
 }
 
 .retangulo.direita {
-  right: 7%; /* Ajusta a posição do retângulo */
+  left: -10%; /* Ajusta a posição do retângulo */
 }
 
 .retangulo.esquerda {
-  left: 7%; /* Ajusta a posição do retângulo */
+  right: -10%; /* Ajusta a posição do retângulo */
 }
 
 /* Cores dos retângulos */
@@ -32,108 +32,15 @@
 /* Media queries para ajustar o tamanho e a posição dos retângulos em diferentes tamanhos de tela */
 @media (max-width: 768px) {
   .retangulo {
-    top: -8%;
-    width: 70vw;
+    top: -12%;
+    width: 100%;
     height: 35vw; /* Ajustado para manter a proporção */
-    border-radius: 25vw;
+    border-radius: 20px;
+    transform: translateX(-50%); /* Ajusta a centralização para o centro do próprio .retangulo */
   }
 
-  .retangulo.direita,
-  .retangulo.esquerda {
-    right: 0;
-    left: auto; /* Ajuste para centralizar se necessário */
-  }
-}
-
-@media (max-width: 480px) {
-  .retangulo {
-    top: -8%;
-    width: 90vw;
-    height: 45vw; /* Ajustado para manter a proporção */
-    border-radius: 35vw;
+  .retangulo.esquerda, .retangulo.direita {
+    left: 50%; /* Ajusta a posição do retângulo */
   }
 }
 
-/* Estilos base para dispositivos móveis (menores que 768px) */
-.retangulo {
-  width: 80vw; /* Maior percentual da tela */
-  height: 40vw;
-  border-radius: 10vw;
-}
-
-.retangulo.direita, .retangulo.esquerda {
-  left: 10%; /* Centraliza com um pouco de margem */
-}
-
-.retangulo-treinamentos {
-  width: 70vw;
-  height: 35vw;
-  border-radius: 10vw 0 0 10vw;
-}
-
-/* Estilos para tablets (768px a 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .retangulo {
-      width: 50vw;
-      height: 25vw;
-      border-radius: 10vw;
-  }
-
-  .retangulo.direita {
-      right: 10%;
-  }
-
-  .retangulo.esquerda {
-      left: 10%;
-  }
-
-  .retangulo-treinamentos {
-      width: 40vw;
-      height: 30vw;
-      border-radius: 10vw 0 0 10vw;
-  }
-}
-
-/* Estilos para desktops pequenos e médios (992px a 1439px) */
-@media (min-width: 992px) and (max-width: 1439px) {
-  .retangulo {
-      width: calc(30vw + 140px);
-      height: calc(18vw + 30px);
-  }
-
-  .retangulo.direita {
-      right: -15%;
-  }
-
-  .retangulo.esquerda {
-      left: 15%;
-  }
-
-  .retangulo-treinamentos {
-      width: calc(20vw + 30px);
-      height: calc(24vw + 20px);
-      border-radius: 20vw 0 0 20vw;
-  }
-}
-
-/* Estilos para desktops grandes (1440px e acima) */
-@media (min-width: 1440px) {
-  .retangulo {
-      width: 35vw; /* Controle sobre o tamanho máximo */
-      height: 20vw;
-  }
-
-  .retangulo.direita {
-      right: 12%;
-  }
-
-  .retangulo.esquerda {
-      left: 12%;
-  }
-
-  .retangulo-treinamentos {
-      width: 15vw;
-      height: 18vw;
-      border-radius: 20vw 0 0 20vw;
-  }
-}

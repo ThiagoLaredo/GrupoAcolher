@@ -23,9 +23,17 @@
 .contact-info {
   display: flex;
   align-items: center;
+  justify-content: start;
+  gap: 20px;
 }
 
-.contact-info img {
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.contact-item img {
   margin-right: 5px;
   width: 20px;
 }
@@ -33,12 +41,15 @@
 .contact-info a {
   font: 400 0.8rem/1.4 'Poppins', sans-serif;
   color: var(--textwhite);
-  margin-right: 20px; /* Ajuste conforme necessário para mais espaço entre os itens */
-  transition: opacity 0.3s ease; /* Adiciona uma transição suave para o efeito de hover */
+  transition: opacity 0.3s ease;
 }
 
 .contact-info a:hover {
-  opacity: 0.7; /* Define a opacidade ao passar o mouse */
+  opacity: 0.7;
+}
+
+.contact-text {
+  display: inline; /* Assegura que o texto é visível por padrão */
 }
 
 .social-instagram {
@@ -132,11 +143,21 @@ ul[data-menu="list"] {
     display: none;
   }
 
+  .header-contacts{
+    justify-content: center;
+    gap: 10px
+  }
+
   .contact-info {
    gap: 10px
   }
 
-  .contact-info a {
-    display: none;
+  .contact-text {
+    display: none; /* Esconde o texto em dispositivos móveis */
   }
+
+  .hidden {
+    display: none;
+}
+
 }
