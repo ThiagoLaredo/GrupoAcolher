@@ -15,6 +15,7 @@ export default class MenuMobile {
     this.closeMenu = this.closeMenu.bind(this);
     this.handleSubmenuClick = this.handleSubmenuClick.bind(this); // Vincula o método ao contexto da classe
   }
+  
 
   isMobile() {
     return window.innerWidth <= 800; // Exemplo de breakpoint para mobile
@@ -128,17 +129,196 @@ export default class MenuMobile {
   // }
   handleSubmenuClick() {
     const submenuItems = this.menuList.querySelectorAll('.has-submenu > span');
+  
     submenuItems.forEach(item => {
-        const link = item.querySelector('a'); // Seleciona o link "Serviços"
-
-        link.addEventListener('click', (e) => {
-            if (this.isMobile()) {
-                // No mobile, o link redireciona diretamente
-                window.location.href = link.href;
-            }
-        });
+      const parent = item.closest('.has-submenu');
+      const submenu = parent.querySelector('.submenu');
+      let arrow = parent.querySelector('.submenu-arrow');
+  
+      if (!arrow) {
+        arrow = this.createArrow();
+        item.appendChild(arrow);
+      }
+  
+      // Inicializa o estado do submenu e a seta
+      this.initializeSubmenuState(submenu, arrow);
+  
+      // Remove qualquer evento previamente atribuído para evitar duplicidade
+      arrow.removeEventListener('click', this.toggleSubmenu);
+      parent.removeEventListener('mouseenter', this.showSubmenu);
+      parent.removeEventListener('mouseleave', this.hideSubmenu);
+  
+      if (this.isMobile()) {
+        // No mobile: Toggle no clique da seta
+        arrow.addEventListener('click', this.toggleSubmenu.bind(this, submenu, arrow));
+      } else {
+        // No desktop: Mostra e esconde no hover
+        parent.addEventListener('mouseenter', this.showSubmenu.bind(this, submenu, arrow));
+        parent.addEventListener('mouseleave', this.hideSubmenu.bind(this, submenu, arrow));
+      }
     });
-}
+  }
+  
+  showSubmenu(submenu, arrow) {
+    submenu.style.display = 'flex';
+    submenu.classList.add('active');
+    arrow.style.transform = 'rotate(180deg)';  // Seta para cima
+  }
+  
+  hideSubmenu(submenu, arrow) {
+    submenu.style.display = 'none';
+    submenu.classList.remove('active');
+    arrow.style.transform = 'rotate(0deg)';  // Seta para baixo
+  }
+  
+  toggleSubmenu(submenu, arrow, event) {
+    event.preventDefault();
+    const isOpen = submenu.classList.contains('active');
+  
+    if (isOpen) {
+      this.hideSubmenu(submenu, arrow);
+    } else {
+      this.showSubmenu(submenu, arrow);
+    }
+  }
+  
+  
+  toggleSubmenu(submenu, arrow, event) {
+    event.preventDefault();
+    const isOpen = submenu.classList.contains('active');
+  
+    if (isOpen) {
+      submenu.style.display = 'none';
+      submenu.classList.remove('active');
+      arrow.style.transform = 'rotate(0deg)'; // Seta para baixo
+    } else {
+      submenu.style.display = 'flex';
+      submenu.classList.add('active');
+      arrow.style.transform = 'rotate(180deg)'; // Seta para cima
+    }
+  }
+  
+  
+  initializeSubmenuState(submenu, arrow) {
+    if (submenu.classList.contains('active')) {
+      submenu.style.display = 'flex'; // Certifique-se de que está visível se ativo
+      arrow.style.transform = 'rotate(180deg)'; // Seta para cima
+    } else {
+      submenu.style.display = 'none'; // Certifique-se de que está escondido se não ativo
+      arrow.style.transform = 'rotate(0deg)'; // Seta para baixo
+    }
+  }
+  
+  toggleSubmenu(submenu, arrow, event) {
+    event.preventDefault();
+    const isOpen = submenu.classList.contains('active');
+  
+    if (isOpen) {
+      submenu.style.display = 'none';
+      submenu.classList.remove('active');
+      arrow.style.transform = 'rotate(0deg)'; // Seta para baixo
+    } else {
+      submenu.style.display = 'flex';
+      submenu.classList.add('active');
+      arrow.style.transform = 'rotate(180deg)'; // Seta para cima
+    }
+  }
+  
+  
+  createArrow() {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'submenu-arrow');
+    svg.setAttribute('width', '24');
+    svg.setAttribute('height', '24');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M8 10l4 4 4-4');
+    path.setAttribute('stroke', 'currentColor');
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    svg.appendChild(path);
+  
+    return svg;
+  }
+  
+  toggleSubmenu(submenu, arrow, event) {
+    event.preventDefault();
+    const isOpen = submenu.classList.contains('active');
+  
+    if (isOpen) {
+      submenu.style.display = 'none';
+      submenu.classList.remove('active');
+      arrow.style.transform = 'rotate(0deg)'; // Seta para baixo
+    } else {
+      submenu.style.display = 'flex';
+      submenu.classList.add('active');
+      arrow.style.transform = 'rotate(180deg)'; // Seta para cima
+    }
+  }
+  
+  isMobile() {
+    return window.matchMedia("(max-width: 768px)").matches;
+  }
+  
+  
+  createArrow() {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'submenu-arrow');
+    svg.setAttribute('width', '20');
+    svg.setAttribute('height', '20');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M8 10l4 4 4-4');
+    path.setAttribute('stroke', 'currentColor');
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    svg.appendChild(path);
+  
+    return svg;
+  }
+  
+  handleSubmenuToggle(submenu, arrow, e) {
+    if (this.isMobile()) {
+      e.preventDefault();
+      e.stopPropagation();
+  
+      const isActive = submenu.classList.contains('active');
+  
+      if (isActive) {
+        gsap.to(submenu, {
+          height: 0,
+          opacity: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+          onComplete: () => {
+            submenu.classList.remove('active');
+            arrow.style.transform = ''; // Set arrow down
+          }
+        });
+      } else {
+        gsap.set(submenu, { height: 'auto', display: 'block' });
+        const fullHeight = submenu.offsetHeight + "px";
+        gsap.fromTo(submenu, {
+          height: 0, opacity: 0
+        }, {
+          height: fullHeight, opacity: 1, duration: 0.3, ease: "power2.inOut", onComplete: () => {
+            submenu.classList.add('active');
+            arrow.style.transform = 'rotate(180deg)'; // Set arrow up
+          }
+        });
+      }
+    }
+  }
+  
+
 
 
 
