@@ -63,65 +63,43 @@
   transform: rotate(180deg);
 }
 
-/* Comportamento no hover para desktop */
-@media (min-width: 769px) {
+@media (max-width: 768px) {
+
   .submenu {
-    display: none; /* Esconde o submenu no desktop por padrão */
-    position: absolute;
-    top: 100%;
-    left: 0;
+    display: none; /* Inicia escondido no mobile */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    position: static;
+    list-style: none;
+    padding: 4px;
+    margin: 0;
+    border-radius: 0;
+    white-space: nowrap;
     width: max-content;
-    background-color: var(--amarelo);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-    padding: 10px;
-    border-radius: 8px;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    background-color: var(--laranja);
   }
 
-  .has-submenu:hover .submenu {
-    display: flex; /* Mostra o submenu no hover */
+  .submenu.active {
+    display: flex; /* Só exibe quando ativo */
     opacity: 1;
     visibility: visible;
   }
 
-  /* Rotaciona a seta no hover para o desktop */
-  .has-submenu:hover .submenu-arrow {
-    transform: rotate(180deg); /* Rotação da seta para cima */
-  }
+.submenu li {
+  padding: 2px 20px;
+  text-align: left;
+  width: 100%;
 }
 
-/* Mobile - Sempre exibir o submenu no mobile */
-@media (max-width: 768px) {
-  .has-submenu {
-    position: relative; /* Garante que o z-index funcione corretamente */
-  }
+.submenu li:hover {
+  background-color: var(--azul); /* Cor de fundo no hover */
+  color: #ffffff; /* Cor do texto no hover */
+}
 
-  .has-submenu > span {
-    display: block;
-  }
-
-  .submenu {
-    display: block; /* Exibe o submenu por padrão no mobile */
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background-color: var(--laranja);
-    z-index: 1050;
-    padding: 0;
-    margin: 0;
-    opacity: 1; /* Garante que o submenu seja visível no mobile */
-    visibility: visible; /* Submenu visível no mobile */
-    border-radius: 0;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
-    transition: none; /* Remove transições no mobile */
-  }
-
-  .submenu li {
-    width: 100%; /* Faz os itens ocuparem toda a largura */
-    text-align: center; /* Centraliza o texto */
-    padding: 0; /* Ajusta o padding */
-  }
+.has-submenu>span {
+  display: inline-flex;
+  gap: 10px;
+}
 }
