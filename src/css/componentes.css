@@ -44,3 +44,20 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .retangulo {
+    top: -16%; /* Ajusta a posição do retângulo */
+    width: 38vw; /* Largura relativa à largura da viewport */
+    height: 24vw; /* Altura relativa à largura da viewport */
+    border-radius: 30vw; /* Bordas arredondadas relativas à largura da viewport */
+  }
+
+  .retangulo.direita {
+    left: -15%; /* Ajusta a posição do retângulo */
+  }
+  
+  .retangulo.esquerda {
+    right: -15%; /* Ajusta a posição do retângulo */
+  }
+
+}
