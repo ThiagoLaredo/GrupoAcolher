@@ -99,10 +99,9 @@ ul[data-menu="list"] {
   position: relative; /* Necessário para posicionar a seta */
 }
 
-.menu li a {
-  font: 400 1rem/1.4 'Poppins', sans-serif;
+ul[data-menu="list"] li a {
+  font: 600 1rem/1.4 'Poppins', sans-serif;
   color: var(--text);
-  font-weight: 600;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -113,8 +112,12 @@ ul[data-menu="list"] {
   position: relative;
   cursor: pointer; /* Aplica o cursor de mãozinha em todos os links e spans */
   transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1; /* Opacidade total quando não está no estado de hover */
 }
 
+ul[data-menu="list"] li a:hover {
+  opacity: 0.7 !important
+}
 
 /* Estilo adicional para o mobile */
 @media (max-width: 768px) {

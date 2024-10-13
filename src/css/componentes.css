@@ -32,10 +32,10 @@
 /* Media queries para ajustar o tamanho e a posição dos retângulos em diferentes tamanhos de tela */
 @media (max-width: 768px) {
   .retangulo {
-    top: -12%;
-    width: 100%;
+    top: -16%;
+    width: 85%;
     height: 35vw; /* Ajustado para manter a proporção */
-    border-radius: 20px;
+    border-radius: 20vw;
     transform: translateX(-50%); /* Ajusta a centralização para o centro do próprio .retangulo */
   }
 
