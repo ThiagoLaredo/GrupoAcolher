@@ -44,7 +44,7 @@
 .treinamentos-imagens {
   display: flex;
   flex-wrap: wrap; /* Permite a quebra de linha se necessário */
-  gap: 10px; /* Espaçamento entre as imagens */
+  gap: 20px; /* Espaçamento entre as imagens */
   justify-content: flex-start; /* Alinha imagens ao início do contêiner */
 }
 
