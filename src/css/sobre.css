@@ -24,7 +24,6 @@
 .texto-destaque {
   font: 700 1.2rem 'Poppins', sans-serif;
   color: var(--laranja);
-  white-space: nowrap;
   display: inline;
 }
 
