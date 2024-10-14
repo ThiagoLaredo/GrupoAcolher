@@ -16,9 +16,7 @@
 }
 
 .sobre-descritivo p {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;  
+  margin-bottom: 10px;  
   font: 300 1rem/1.6 'Poppins', sans-serif;
   color: var(--text);
 }
@@ -26,9 +24,12 @@
 .texto-destaque {
   font: 700 1.2rem 'Poppins', sans-serif;
   color: var(--laranja);
+  white-space: nowrap;
+  display: inline;
 }
+
 .texto-grifado {
-  font: 700 1.5rem 'Poppins', sans-serif;
+  font: 700 1.2rem 'Poppins', sans-serif;
   background-color: rgba(255, 175, 0, 0.5); /* Cor de fundo semitransparente */
   padding: 0 6px; /* Padding horizontal para espaçamento */
   border-radius: 4px; /* Bordas arredondadas */
@@ -206,6 +207,10 @@
   .sobre-img-2 {
     max-width: 100%;
     /* height: 300px; */
+  }
+
+  .decorativo-sobre {
+    width: 50%;  
   }
 
   .selo-container {
