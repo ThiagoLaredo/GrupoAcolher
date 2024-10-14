@@ -4,10 +4,10 @@
   justify-content: flex-start;
   height: 100vh;
   width: 100%;
-  background: url('../img/quebra-cabeca-azul.svg');
+  background: url('../img/index/background-servicos-desktop-min.svg');
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: 100%;
   background-repeat: no-repeat;
   opacity: 0;  
   position: relative;
@@ -126,6 +126,7 @@
 
   .introducao.intro-servicos {
     background-attachment: scroll;
+    background: url('../img/index/background-servicos-mobile2-min.svg');
   }
 
   .servicos-todos {
