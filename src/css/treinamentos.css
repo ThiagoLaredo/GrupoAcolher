@@ -34,9 +34,7 @@
 
 
 .treinamentos-descritivo p {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;  
+  margin-bottom: 10px;  
   font: 300 1rem/1.6 'Poppins', sans-serif;
   color: var(--text);
 }

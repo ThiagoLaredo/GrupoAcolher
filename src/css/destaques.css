@@ -1,7 +1,7 @@
 .destaques-background {
   background-image: url('../img/background-destaques.webp'); /* Caminho para o SVG */
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh; /* 100% de altura */
@@ -94,6 +94,11 @@
 }
 
 @media (max-width: 768px) {
+
+  .destaques-background {
+    background-image: url('../img/background-destaques-720w.webp'); /* Caminho para o SVG */
+    background-attachment: scroll;
+  }
 
   .destaques-lista {
     flex-direction: column;

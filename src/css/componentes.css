@@ -39,6 +39,10 @@
     transform: translateX(-50%); /* Ajusta a centralização para o centro do próprio .retangulo */
   }
 
+  .retangulo.img-sobre-home.direita.amarelo {
+    top: -6%; /* Ajusta a posição do retângulo */
+  }
+
   .retangulo.esquerda, .retangulo.direita {
     left: 50%; /* Ajusta a posição do retângulo */
   }

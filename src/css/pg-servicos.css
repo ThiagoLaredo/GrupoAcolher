@@ -4,7 +4,7 @@
   justify-content: flex-start;
   height: 100vh;
   width: 100%;
-  background: url('../img/quebra-cabeca-azul.svg') no-repeat center center;
+  background: url('../img/quebra-cabeca-azul.svg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -123,6 +123,10 @@
 }
 
 @media (max-width: 768px) {
+
+  .introducao.intro-servicos {
+    background-attachment: scroll;
+  }
 
   .servicos-todos {
     padding: 60px 20px;
