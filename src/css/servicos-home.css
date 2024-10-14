@@ -1,6 +1,6 @@
 .servicos {
   background-color: #1AAAB3; /* Cor azul */
-  background-image: url('../img/quebra-cabeca-azul.svg'); /* Caminho para o SVG */
+  background-image: url('../img/index/background-servicos-desktop-min.svg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -84,6 +84,7 @@
 
   .servicos {
     background-attachment: scroll;
+    background-image: url('../img/index/background-servicos-mobile-min.svg');
   }
 
   .servicos-conteudo {
