@@ -1,11 +1,16 @@
 export default class FormHandler {
-  constructor(formId) {
-      this.form = document.getElementById(formId);
-      this.responseMessage = document.createElement('div');
-      this.form.append(this.responseMessage);
-      this.addEventListeners();
-      this.styleResponseMessage();
-  }
+    constructor(formSelector) {
+        this.form = document.querySelector(formSelector);
+        if (!this.form) {
+            console.error('Formulário não encontrado. Verifique se o seletor está correto.');
+            return;
+        }
+        this.responseMessage = document.createElement('div');
+        this.form.append(this.responseMessage);
+        this.addEventListeners();
+        this.styleResponseMessage();
+    }
+    
 
   addEventListeners() {
       this.form.addEventListener('submit', event => this.handleSubmit(event));
@@ -52,7 +57,7 @@ export default class FormHandler {
 
   styleResponseMessage(type) {
       this.responseMessage.style.marginTop = '10px';
-      this.responseMessage.style.color = 'white';
+      this.responseMessage.style.color = 'black';
       this.responseMessage.style.font = '500 1rem/1.4 "Hind", sans-serif';
   }
 
