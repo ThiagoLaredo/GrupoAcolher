@@ -57,7 +57,7 @@ export default class FormHandler {
 
   styleResponseMessage(type) {
       this.responseMessage.style.marginTop = '10px';
-      this.responseMessage.style.color = 'white';
+      this.responseMessage.style.color = 'black';
       this.responseMessage.style.font = '500 1rem/1.4 "Hind", sans-serif';
   }
 
