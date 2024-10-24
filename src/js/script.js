@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initPageOpenAnimations();
     initScrollAnimations();
-    new FormHandler('contactForm');
+    new FormHandler('.contato-form');
 
   // Inicializa a rolagem suave na página de serviços
  // Verifica se estamos na página 'servicos.html'

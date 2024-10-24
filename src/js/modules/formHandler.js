@@ -1,11 +1,16 @@
 export default class FormHandler {
-  constructor(formId) {
-      this.form = document.getElementById(formId);
-      this.responseMessage = document.createElement('div');
-      this.form.append(this.responseMessage);
-      this.addEventListeners();
-      this.styleResponseMessage();
-  }
+    constructor(formSelector) {
+        this.form = document.querySelector(formSelector);
+        if (!this.form) {
+            console.error('Formulário não encontrado. Verifique se o seletor está correto.');
+            return;
+        }
+        this.responseMessage = document.createElement('div');
+        this.form.append(this.responseMessage);
+        this.addEventListeners();
+        this.styleResponseMessage();
+    }
+    
 
   addEventListeners() {
       this.form.addEventListener('submit', event => this.handleSubmit(event));
