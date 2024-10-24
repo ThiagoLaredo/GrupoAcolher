@@ -16,7 +16,7 @@ export default class FormHandler {
       const formData = new FormData(this.form);
       
       this.showLoadingIndicator();
-      fetch('./enviar.php', {
+      fetch('./send_mail.php', {
           method: 'POST',
           body: formData
       })
