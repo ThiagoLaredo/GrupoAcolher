@@ -23,6 +23,7 @@ import "../css/contato.css";
 import MenuMobile from './modules/menu-mobile.js';
 import { initPageOpenAnimations, initScrollAnimations } from './modules/animations.js';
 import initScrollSuave from './modules/scrollSuave.js';
+import FormHandler from './modules/formHandler.js';
 
 // Função principal de inicialização
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initPageOpenAnimations();
     initScrollAnimations();
+    new FormHandler('contactForm');
+
   // Inicializa a rolagem suave na página de serviços
  // Verifica se estamos na página 'servicos.html'
  if (window.location.pathname.includes('servicos')) {
